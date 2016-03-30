@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Diversity Scholarship</title>
+  <meta name="description" content="The Tech Diversity Scholarship provides access to technology education for all." />
+  <meta name="keywords"  content="tech,divesity,scholarships,technology,education,school,college,financial-aid,minorities,women,disabled,military" />
+	<meta name="Resource-type" content="Document" />
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600italic,600" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+
+  <style>
+  /* Section Framework
+  * --------------------------------------- */
+
+  .section {
+    overflow:hidden;
+    color: #526C79;
+  }
+  .section h1, h2, h3, h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  .section p {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .section-banner {
+    position: absolute;
+    right: -100px;
+    top: 0px;
+    height: 100%;
+    opacity:0;
+-moz-transition: opacity 2s; /* Firefox 4 */
+-webkit-transition: opacity 2s; /* Safari and Chrome */
+-o-transition: opacity 2s;
+transition: opacity 2s;
+  }
+  .section-img {
+    opacity:0;
+-moz-transition: opacity 2s; /* Firefox 4 */
+-webkit-transition: opacity 2s; /* Safari and Chrome */
+-o-transition: opacity 2s;
+transition: opacity 2s;
+  }
+
+  .section button {
+    background: rgba(123, 202, 241, .69);
+    border-radius: 2px;
+    border: none;
+    width: 229px;
+    height: 51px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'AvenirNext-Bold';
+    font-size: 16.87px;
+  }
+
+  .section-frame {
+    margin: 0 auto;
+    width:75%;
+  }
+  .section-left {
+    float: left;
+    width: 46%;
+  }
+  .section-right {
+    float: right;
+    width: 50%;
+  }
+  .section-logo-block {
+    width: 100%;
+    height: auto;
+    text-align: justify;
+  }
+  .section3-logo-block-inner div {
+    padding: 0px 17px;
+    display: inline-block;
+  }
+  .section4-logo-block-inner div {
+    padding: 10px 22px;
+    display: inline-block;
+  }
+  .section5-logo-block-inner div {
+      padding: 10px 14px;
+      display: inline-block;
+    }
+
+  /* Section 1 - Overview
+  * --------------------------------------- */
+
+  #section1 {
+    background: url(img/overview-main-image.png) no-repeat center center;
+    background-size: cover;
+    border-top: 10px solid #F8CE76;
+  }
+  .section1-left {
+    float: left;
+    width: 40%;
+  }
+  .section1-right {
+    float: right;
+    width: 35%;
+    margin-right: 50px;
+  }
+
+  #section1-bottom {
+    width: 100%;
+    height: auto;
+    background-color: #526C79;
+    position: fixed;
+    bottom: 0px;
+  }
+#section1-bottom-inner {
+  margin: auto;
+  width:80%;
+  text-align: justify;
+}
+
+#section1-bottom-inner div {
+  padding: 30px 28px;
+  display: inline-block;
+}
+
+  #section2-intro {
+  margin-top: 100px;
+  }
+
+  #section2-students div {
+    display: inline-block;
+    width: 49%;
+  }
+  #section2-student-title {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+  }
+  #section2-student-name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  #section2-student-story {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.49;
+  }
+  #section2-student-story img {
+    padding-left: 8px;
+    vertical-align: middle;
+  }
+
+  #section3 {
+  position:relative;
+  }
+
+  #map-section {
+      text-align: center;
+      margin: 0 auto;
+      width:75%;
+      height: 100%;
+      padding: 15px 0;
+  }
+
+  #img_placeholder {
+      width: 200px;
+      height: 200px;
+      background: #ccc;
+      margin-bottom: 20px;
+      float:left;
+    }
+
+  /* Colors
+  * --------------------------------------- */
+  #white {
+    color: white;
+  }
+  #navy {
+    color: #526C79;
+  }
+
+  /* Fonts
+  * --------------------------------------- */
+  #opensans {
+    font-family: 'Open Sans', sans-serif;
+  }
+  #gentium {
+    font-family: 'Gentium Book Basic', serif;
+  }
+
+  /* Custom Navigation
+  * --------------------------------------- */
+
+  #fp-nav.custom ul li a.active span,
+  .fp-slidesNav ul li a.active span,
+  #fp-nav.custom ul li:hover a.active span,
+  .fp-slidesNav ul li:hover a.active span{
+  background: #fff;
+  opacity: 1;
+   }
+  #fp-nav.custom ul li a span, .fp-slidesNav ul li a span {
+    border: 1px solid #fff;
+    background: #fff;
+    opacity: .5;
+  }
+  #fp-nav.custom .fp-tooltip{
+    color: #fff;
+
+  }
+</style>
+
+</head>
+<body>
+	<div id="tech-diversity">
+		<div class="section" id="section1">
+          <div class="section1-left"><img src="img/tech-diversity-logo.png" width="428px" height="130px" style="float:right;"/><p><button type="button" style="float:right;">Apply Today</button></div>
+          <div class="section1-right"><p>The Tech Diversity Scholarship is the product of a public-private
+            partnership of organizations committed to providing access to technology education for all. The scholarship
+            is designed to remove financial barriers for people who are underrepresented in the technology industry,
+            including but not limited to: women, people of color, military personnel and people with disabilities.
+            Financially-eligible students will be considered and may be eligible to receive a full-ride scholarship
+            to attend a full-time code school and take the first step toward a fulfilling career in technology.</p>
+           </div>
+           <div id="section1-bottom">
+              <div id="section1-bottom-inner">
+                <div><img src="img/wsj-logo.png"/></div>
+                <div><img src="img/white-house-logo.png"/></div>
+                <div><img src="img/nbc-logo.png"/></div>
+                <div><img src="img/fastco-logo.png"/></div>
+                <div><img src="img/cnn-logo.png"/></div>
+                <div><img src="img/atlantic-logo.png"/></div>
+                <div><img src="img/abc-logo.png"/></div>
+              </div>
+            </div>
+		</div>
+		<div class="section" id="section2">
+      <div class="section-frame">
+        <div class="section-left" id="section2-intro"><h1>Student Success Stories</h1><p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+             deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="section-right" id="section2-students">
+            <div><img class="section-img" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
+            </div>
+            <div><p id="section2-student-title">Web Developer</p>
+              <p id="section2-student-name">LeRoy Gardner</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p id="section2-student-story">Read LeRoy's full story <img src="img/arrow.png"/></p>
+            </div>
+            <div><img class="section-img" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
+            </div>
+            <div><p id="section2-student-title">Mobile Developer</p>
+              <p id="section2-student-name">Astrid Countee</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p id="section2-student-story">Read Astrid's full story <img src="img/arrow.png"/></p>
+            </div>
+          </div>
+         </div>
+       </div>
+		<div class="section" id="section3">
+      <div class="section-frame">
+        <div class="section-left" id="white">
+          <h4>The Commitment:</h4>
+          <h1>Education Partners</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+             deserunt mollit anim id est laborum.</p>
+             <div class="section-logo-block">
+               <div class="section3-logo-block-inner">
+               <div><img src="img/tiy-logo.png"/></div>
+               <div><img src="img/hack-reactor-logo.png"/></div>
+               <div><img src="img/code-fellows-logo.png"/></div>
+             </div>
+             </div>
+             <img class="section-banner" data-src="img/student-main-image.png" onload="this.style.opacity='1';" />
+        </div>
+        </div>
+       </div>
+    <div class="section" id="section4">
+      <div class="section-frame">
+        <div class="section-left" id="navy">
+          <h4>The Commitment:</h4>
+          <h1>Employment Partners</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+             deserunt mollit anim id est laborum.</p>
+             <div class="section-logo-block">
+               <div class="section4-logo-block-inner">
+               <div><img src="img/google-logo.png"/></div>
+               <div><img src="img/home-depot-logo.png"/></div>
+               <div><img src="img/microsoft-logo.png"/></div>
+               <div><img src="img/att-logo.png"/></div>
+               <div><img src="img/bmw-logo.png"/></div>
+               <div><img src="img/ibm-logo.png"/></div>
+             </div>
+             </div>
+             <img class="section-banner" data-src="img/employment-main-image.png" onload="this.style.opacity='1';" />
+        </div>
+      </div>
+		</div>
+    <div class="section" id="section5">
+      <div class="section-frame">
+        <div class="section-left" id="white">
+          <h4>The Commitment:</h4>
+          <h1>The Support Organizations</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+             deserunt mollit anim id est laborum.</p>
+             <div class="section-logo-block">
+               <div class="section5-logo-block-inner">
+               <div><img src="img/white-house-logo-2.png"/></div>
+               <div><img src="img/anita-borg-logo.png"/></div>
+               <div><img src="img/nclr-logo.png"/></div>
+             </div>
+             </div>
+             <img class="section-banner" data-src="img/org-main-image.png" onload="this.style.opacity='1';" />
+        </div>
+      </div>
+  	</div>
+    <div class="section" id="sectionsix">
+      <div class="section-frame">
+        <div class="section-left" id="white">
+          <h4>The Commitment:</h4>
+          <h1>Accountability</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+             deserunt mollit anim id est laborum.</p>
+             <div class="section-logo-block">
+               <div><img src="img/skills-fund-logo.png"/></div>
+             </div>
+             <img class="section-banner" data-src="img/acc-main-image.png" onload="this.style.opacity='1';" />
+        </div>
+      </div>
+		</div>
+    <div class="section" id="sectionseven">
+				<div id="map-section"><h1 id="navy">Cities and Partners</h1></div>
+		</div>
+    <div class="section fp-auto-height" id="section-footer">
+		<div id="footer-top">
+      <div id="footer-frame">
+        <div class="footer-intro" id="footer-left"><h4>Stay in the Loop</h4><p>Sign up for the Tech Diversity Scholarship
+email list for announcements, new partners, and city additions.</div>
+        <div id="footer-right"><input type="text" name="mail" value="Email Address"> <input type="submit" value="Submit Email"></div>
+      </div>
+    </div>
+    <div id="footer-bottom">
+					<p>Copyright © 2016 Tech Diversity Scholarship</p>
+          <p>Privacy | Terms of Service </p>
+    </div>
+  </div>
+</body>
+</html>
