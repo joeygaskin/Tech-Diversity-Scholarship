@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600italic,600" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700"/>
   <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -33,9 +34,14 @@
     overflow:hidden;
     color: #526C79;
   }
-  .section h1, h2, h3, h4{
+  .section h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+    font-size: 30px;
+  }
+  .section h4{
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 18px;
   }
 
   .section p {
@@ -71,17 +77,20 @@ transition: opacity 2s;
     color: rgba(255, 255, 255, 1);
     text-align: center;
     text-decoration: none;
-    font-family: 'AvenirNext-Bold';
-    font-size: 16.87px;
+    font-family: "Arial";
+    font-size: 16px;
+    letter-spacing: .8px;
+    font-weight: 600;
   }
 
   .section-frame {
     margin: 0 auto;
-    width:75%;
+    width:80%;
   }
   .section-left {
     float: left;
-    width: 46%;
+    width: 45%;
+    margin-left: 10px;
   }
   .section-right {
     float: right;
@@ -198,7 +207,6 @@ transition: opacity 2s;
     color: white;
   }
   #map-title {
-    color: #526C79;
     position: absolute;
     text-align: center;
     z-index: 1;

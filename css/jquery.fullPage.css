@@ -175,7 +175,7 @@ opacity: 1;
     position: absolute;
     top: -2px;
     color: #546c76;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
@@ -233,7 +233,7 @@ opacity: 1;
     top: 20px;
 }
 
-body {font-family: "Open Sans", "Gentium Book Basic", Helvetica, Arial, Verdana, sans-serif, serif; background-color: #384a54;}
+body {font-family: "Open Sans", "Gentium Book Basic", "PT Sans", Helvetica, Arial, Verdana, sans-serif, serif; background-color: #384a54;}
 
 /* Footer
 * --------------------------------------- */
@@ -274,7 +274,7 @@ body {font-family: "Open Sans", "Gentium Book Basic", Helvetica, Arial, Verdana,
   color: white;
 }
 #footer-bottom p {
-  font-family: "AvenirNext-Regular";
+  font-family: "Arial";
   font-size: 10px;
   color: #FFFFFF;
   line-height: 15px;
@@ -287,11 +287,12 @@ body {font-family: "Open Sans", "Gentium Book Basic", Helvetica, Arial, Verdana,
   margin:0;
 }
 #footer-right-input {
-  font-family: AvenirNext-Regular;
+  font-family: "Arial";
   font-size: 14px;
   color: #BBBBBB;
   width:263px;
   height:42px;
+  letter-spacing: .4px;
 }
 
 #footer-right-submit {
@@ -303,8 +304,10 @@ body {font-family: "Open Sans", "Gentium Book Basic", Helvetica, Arial, Verdana,
   color: rgba(255, 255, 255, 1);
   text-align: center;
   text-decoration: none;
-  font-family: 'AvenirNext-Bold';
-  font-size: 16.87px;
+  font-family: "Arial";
+  font-size: 14px;
+  letter-spacing: .6px;
+  font-weight: 600;
 }
 
 /* Arrow Controls
