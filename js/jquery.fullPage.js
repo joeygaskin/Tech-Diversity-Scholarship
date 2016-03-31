@@ -2839,7 +2839,7 @@ $(document).ready(function() {
           loopHorizontal: false,
           lockAnchors:true,
 					anchors:['overview', 'students', 'education', 'employment', 'organizations', 'accountability', 'locations', 'updates'],
-          sectionsColor: ['#526C79', '#D8D8D8', '#99B7C5', '#f2f2f2', '#526c79', '#f8cf77', '#9ab7c5'],
+          sectionsColor: ['#526C79', '#D8D8D8', '#99B7C5', '#D8D8D8', '#526C79', '#F8CE76', '#9ab7c5'],
 					navigation: true,
 					navigationPosition: 'left',
 					navigationTooltips: ['Overview', 'Students', 'Education', 'Employment', 'Organizations', 'Accountability', 'Locations', 'Updates'],
