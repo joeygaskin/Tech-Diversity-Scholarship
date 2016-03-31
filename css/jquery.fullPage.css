@@ -256,6 +256,7 @@ body {font-family: "Open Sans", "Gentium Book Basic", Helvetica, Arial, Verdana,
   height: auto;
   float: right;
   width: 50%;
+  margin-top: 40px;
 }
  #footer-top {
   height: auto;
@@ -273,13 +274,37 @@ body {font-family: "Open Sans", "Gentium Book Basic", Helvetica, Arial, Verdana,
   color: white;
 }
 #footer-bottom p {
-  font-size: 12px;
+  font-family: "AvenirNext-Regular";
+  font-size: 10px;
+  color: #FFFFFF;
+  line-height: 15px;
   text-align: center;
 }
 .footer-intro h4{
-  font-size: 18px;
+  font-family: "OpenSans";
+  font-size: 20px;
   font-weight: bold;
   margin:0;
+}
+#footer-right-input {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  color: #BBBBBB;
+  width:263px;
+  height:42px;
+}
+
+#footer-right-submit {
+  background: rgba(123, 202, 241, .69);
+  border-radius: 2px;
+  border: none;
+  width: 190px;
+  height: 49px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'AvenirNext-Bold';
+  font-size: 16.87px;
 }
 
 /* Arrow Controls

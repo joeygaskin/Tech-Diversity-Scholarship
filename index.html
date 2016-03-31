@@ -6,15 +6,24 @@
   <meta name="description" content="The Tech Diversity Scholarship provides access to technology education for all." />
   <meta name="keywords"  content="tech,divesity,scholarships,technology,education,school,college,financial-aid,minorities,women,disabled,military" />
 	<meta name="Resource-type" content="Document" />
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600italic,600" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" />
   <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
 
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
+  <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
 
   <style>
   /* Section Framework
@@ -188,8 +197,17 @@ transition: opacity 2s;
   #white {
     color: white;
   }
-  #navy {
+  #map-title {
     color: #526C79;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    margin: 30px auto;
+    width: 100%;
+  }
+  #map-frame {
+    position relative
+    margin: 0 auto;
   }
 
   /* Fonts
@@ -300,7 +318,7 @@ transition: opacity 2s;
        </div>
     <div class="section" id="section4">
       <div class="section-frame">
-        <div class="section-left" id="navy">
+        <div class="section-left">
           <h4>The Commitment:</h4>
           <h1>Employment Partners</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -364,14 +382,14 @@ transition: opacity 2s;
       </div>
 		</div>
     <div class="section" id="sectionseven">
-				<div id="map-section"><h1 id="navy">Cities and Partners</h1></div>
+				<div id="map"><div id="map-frame"><h1 id="map-title">Cities and Partners</h1></div></div>
 		</div>
     <div class="section fp-auto-height" id="section-footer">
 		<div id="footer-top">
       <div id="footer-frame">
-        <div class="footer-intro" id="footer-left"><h4>Stay in the Loop</h4><p>Sign up for the Tech Diversity Scholarship
-email list for announcements, new partners, and city additions.</div>
-        <div id="footer-right"><input type="text" name="mail" value="Email Address"> <input type="submit" value="Submit Email"></div>
+        <div class="footer-intro" id="footer-left"><h4>Stay in the Loop</h4><p>Sign up for the Tech Diversity Scholarship<br>
+email list for announcements, new partners, <br>and city additions.</div>
+        <div id="footer-right"><input type="text" name="mail" value="Email Address" id="footer-right-input"> <input type="submit" value="Submit Email" id="footer-right-submit"></div>
       </div>
     </div>
     <div id="footer-bottom">
@@ -379,5 +397,18 @@ email list for announcements, new partners, and city additions.</div>
           <p>Privacy | Terms of Service </p>
     </div>
   </div>
+
+  <script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidGVjaGRpdmVyc2l0eSIsImEiOiJjaW1nZDl3NmUwMXk4dmdtNnpzbDlxZTRvIn0.5MyuGabE9Vfuvju-gvbUGw';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/techdiversity/cimgdbkx5001a9llvsu473mij', //stylesheet location
+    center: [-98.68, 40.96],
+       zoom: 3.3,
+       // causes pan & zoom handlers not to be applied, similar to
+       // .dragging.disable() and other handler .disable() funtions in Leaflet.
+       interactive: false
+   });
+</script>
 </body>
 </html>
