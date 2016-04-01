@@ -64,11 +64,11 @@
 }
 .section-div-text{
   position: absolute;
-  transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
-  -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
-  -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
-  -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
-  -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+  transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+  -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+  -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+  -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+  -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
   left: 60%;
   width: 33%;
   margin-top: 200px;
@@ -77,7 +77,7 @@
 
   .section-banner {
     position: absolute;
-    right: -100px;
+    right: -130px;
     top: 0px;
     height: 100%;
     list-style:none;
@@ -136,24 +136,56 @@ transition: opacity 2s;
     display: inline-block;
     text-align: justify;
   }
-  .section3-logo-block-inner img {
+
+  .section4-logo-block-inner {
+    width: 100%;
+  }
+
+  .section4-logo-block-inner div {
+    padding: 0% 2%;
+    display: inline-block;
+    text-align: justify;
+  }
+  .section4-logo-block-inner img {
     max-width: 100%;
     height:auto;
+    padding:5px;
   }
-  .section4-logo-block-inner div {
-    padding: 10px 22px;
-    display: inline-block;
+
+  .section5-logo-block-inner {
+    width: 100%;
   }
+
   .section5-logo-block-inner div {
-      padding: 10px 14px;
+      padding: 0% 2%;
       display: inline-block;
+      text-align: justify;
     }
+
+    .section5-logo-block-inner img {
+      max-width: 100%;
+      height:auto;
+    }
+
+    .section6-div-text{
+      position: absolute;
+      transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
+      -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
+      -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
+      -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
+      -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
+      left: 60%;
+      width: 33%;
+      margin-top: 200px;
+      z-index:3;
+
+}
+
   .section-interest-white {
       font-family: 'Open Sans', sans-serif;
       font-size: 12px;
       font-weight: 600;
-      position: absolute;
-      bottom: 0px;
+      margin-top: 30px;
     }
     .section-interest-white img {
       padding-left: 8px;
@@ -163,8 +195,7 @@ transition: opacity 2s;
         font-family: 'Open Sans', sans-serif;
         font-size: 12px;
         font-weight: 600;
-        position: absolute;
-        bottom: 30px;
+      margin-top: 30px;
         opacity: 0.49;
     }
     .section-interest-blue img {
@@ -212,10 +243,23 @@ transition: opacity 2s;
   margin-top: 100px;
   }
 
-  #section2-students div {
+  /*#section2-students div {
     display: inline-block;
-    width: 49%;
-  }
+    width: calc(100%/4);
+  }*/
+.success-story {
+  width: 500px;
+  height: 270px;
+}
+.student-photo {
+  float: left;
+  padding: 5px;
+}
+.student-bio {
+  float:right;
+  width: 50%;
+}
+
   #section2-student-title {
     font-family: 'Gentium Book Basic', serif;
     font-size: 18px;
@@ -237,10 +281,6 @@ transition: opacity 2s;
   #section2-student-story img {
     padding-left: 8px;
     vertical-align: middle;
-  }
-
-  #section3 {
-  position:relative;
   }
 
   #map-section {
@@ -342,25 +382,34 @@ transition: opacity 2s;
              deserunt mollit anim id est laborum.</p>
         </div>
         <div class="section-right" id="section2-students">
-            <div><img class="section-img" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
+            <div class="success-story">
+            <div class="student-photo">
+              <img class="section-img" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
             </div>
-            <div><p id="section2-student-title">Web Developer</p>
+            <div class="student-bio">
+              <p id="section2-student-title">Web Developer</p>
               <p id="section2-student-name">LeRoy Gardner</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <p id="section2-student-story">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
             </div>
-            <div><img class="section-img" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
+          </div>
+            <div class="success-story">
+            <div class="student-photo">
+              <img class="section-img" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
             </div>
-            <div><p id="section2-student-title">Mobile Developer</p>
+            <div class="student-bio">
+            <p id="section2-student-title">Mobile Developer</p>
               <p id="section2-student-name">Astrid Countee</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <p id="section2-student-story">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
             </div>
           </div>
-         </div>
+        </div>
        </div>
+       </div>
+
 		<div class="section" id="section3">
       <div class="section-div">
         <div class="section-div-text" id="white">
@@ -370,22 +419,22 @@ transition: opacity 2s;
              private companies and the government—to reserve spots in in every class for those
               underrepresented in tech, who might not be able to study at a code school otherwise.
               For The Iron Yard, that’s over 1300 students and $18 million in scholarships over three years. </p>
-             <div class="section-logo-block">
-               <div class="section3-logo-block-inner">
-               <div><a href="hello"><img src="img/tiy-logo.png"/></a></div>
+          <div class="section-logo-block">
+            <div class="section3-logo-block-inner">
+               <div><img src="img/tiy-logo.png"/></div>
                <div><img src="img/hack-reactor-logo.png"/></div>
                <div><img src="img/code-fellows-logo.png"/></div>
-             </div>
-             </div>
-             <div class="section-interest-white">Interested in becoming an Education Partner? <img src="img/arrow-white.png"/></div>
-             </div>
-             </div>
-             <img class="section-banner" data-src="img/student-main-image.png" onload="this.style.opacity='1';" />
+            </div>
+          </div>
+          <div class="section-interest-white">Interested in becoming an Education Partner? <img src="img/arrow-white.png"/></div>
+        </div>
+      </div>
+      <img class="section-banner" data-src="img/student-main-image.png" onload="this.style.opacity='1';" />
+    </div>
 
-       </div>
     <div class="section" id="section4">
-      <div class="section-frame">
-        <div class="section-left">
+      <div class="section-div">
+        <div class="section-div-text">
           <h4>The Commitment:</h4>
           <h1>Employment Partners</h1>
           <p>Companies participate in a variety of ways, from contributing financially
@@ -400,15 +449,17 @@ transition: opacity 2s;
                <div><img src="img/bmw-logo.png"/></div>
                <div><img src="img/ibm-logo.png"/></div>
              </div>
-             <div class="section-interest-blue">Interested in becoming an Employment Partner? <img src="img/arrow-blue.png"/></div>
              </div>
-             <img class="section-banner" data-src="img/employment-main-image.png" onload="this.style.opacity='1';" />
+             <div class="section-interest-blue">Interested in becoming an Employment Partner? <img src="img/arrow-blue.png"/></div>
         </div>
       </div>
+      <img class="section-banner" data-src="img/employment-main-image.png" onload="this.style.opacity='1';" />
 		</div>
+
+
     <div class="section" id="section5">
-      <div class="section-frame">
-        <div class="section-left" id="white">
+      <div class="section-div">
+        <div class="section-div-text" id="white">
           <h4>The Commitment:</h4>
           <h1>The Support Organizations</h1>
           <p>The White House has endorsed this program and encourages as many cities as possible
@@ -422,15 +473,17 @@ transition: opacity 2s;
                <div><img src="img/anita-borg-logo.png"/></div>
                <div><img src="img/nclr-logo.png"/></div>
              </div>
-             <div class="section-interest-white">Interested in becoming a Support Organization? <img src="img/arrow-white.png"/></div>
              </div>
-             <img class="section-banner" data-src="img/org-main-image.png" onload="this.style.opacity='1';" />
-        </div>
+             <div class="section-interest-white">Interested in becoming a Support Organization? <img src="img/arrow-white.png"/></div>
+          </div>
       </div>
+      <img class="section-banner" data-src="img/org-main-image.png" onload="this.style.opacity='1';" />
   	</div>
-    <div class="section" id="sectionsix">
-      <div class="section-frame">
-        <div class="section-left" id="white">
+
+
+    <div class="section" id="section6">
+      <div class="section-div">
+        <div class="section6-div-text" id="white">
           <h4>The Commitment:</h4>
           <h1>Accountability</h1>
           <p>The outcomes of the scholarship program will be audited by a third party.
@@ -438,12 +491,16 @@ transition: opacity 2s;
             with all of the outcome data. The goal is to always be focused on the best
             interest of the students, not special interests.</p>
              <div class="section-logo-block">
+               <div class="section6-logo-block-inner">
                <div><img src="img/skills-fund-logo.png"/></div>
              </div>
-             <img class="section-banner" data-src="img/acc-main-image.png" onload="this.style.opacity='1';" />
+             </div>
         </div>
       </div>
+      <img class="section-banner" data-src="img/acc-main-image.png" onload="this.style.opacity='1';" />
 		</div>
+
+
     <div class="section" id="sectionseven">
 				<div id="map"><div id="map-frame"><h1 id="map-title">Cities and Partners</h1></div></div>
 		</div>

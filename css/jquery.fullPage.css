@@ -249,13 +249,13 @@ body {font-family: "Open Sans", "Gentium Book Basic", "PT Sans", Helvetica, Aria
 #footer-left {
   height: auto;
   float: left;
-  width:45%;
+  width:40%;
   font-size: 14px;
 }
 #footer-right {
   height: auto;
   float: right;
-  width: 50%;
+  width: 60%;
   margin-top: 40px;
 }
  #footer-top {
