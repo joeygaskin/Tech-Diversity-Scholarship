@@ -8,8 +8,6 @@
 	<meta name="Resource-type" content="Document" />
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-
-
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600italic,600" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700"/>
@@ -21,6 +19,35 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
+      <!-- ####################################################################################################
+    ####################################################################################################
+    ####################################################################################################
+    ###      ,#.   #####      ############  ########     ####  ########################  ###############
+    ####     t#.    ####      ############  ########       ###############################  ############
+    #####    G#:     #####  ###   ###i   t     i####  ###   #    ###  #   ;#. #  #    #  #      ###  ###
+    #####    K#:     #####  ##  i  #,    #      ####  ####  #    ### :  ,  K.         #         ##. G###
+    ######   ##:     #####  #, ###    ####  ##  ####  ####  #  #  #  # :##  :  ##  i###  #  ###  #  ####
+    #######  ##:     #####  #         ####  ##  ####  ####  #  #  #  t      : ####    #  #  ###  #  ####
+    ######## ##:     #####  #  #####  ####  ##  ####  ###   #  #  , ## i####: ######  #  #  ###G t #####
+    ######## ##:    ######  ##  ##i#   # #  ##  ####  .    ##  ##   ##  ###t: ### ##  #  #  #E##   #####
+    ###########.   #######  ##W    ##    #  ##  ####      ###  ##   ###    i. ###     #  #    ##  :#####
+    ############################################################################################  ######
+    ##########################################################################################    ######
+    ########################################################## #########f###############L#####   #######
+    ########################################################## ######### ############### ##### #########
+    ########################################################## ######### ############### ##### #########
+    ########################################################## ######### ############### ###############
+    ################################################# # # # f #  :# # ,# ## # ##   #:# #  # ## # ## ####
+    ################################################# ### ###  # #.### # # ## ## ##L ### ## #,t# ## ####
+    ################################################## : #### ## # ### # # ## ## ###t ## ## # ## ## ####
+    ################################################.##  #### ## # ##:# ## #  # ###f##  ## .# ## ## ####
+    ################################################   ##  ## ##  #  W#  #  #   ###   # ##  #  #:  #####
+    ########################################################################################### ########
+    ########################################################################################### ########
+    ########################################################################################### ########
+    ####################################################################################################
+    ####################################################################################################
+    #################################################################################################### -->
 
   <style>
   body {
@@ -183,6 +210,7 @@
   .overview-left {
     float: left;
     width: 40%;
+    margin-top: 200px;
   }
   .overview-right {
     float: right;
@@ -196,19 +224,43 @@
   }
   #overview-bottom {
     width: 100%;
-    height: auto;
+    height: 120px;
     background-color: #526C79;
     position: fixed;
     bottom: 0px;
+    z-index: 4;
   }
   #overview-bottom-inner {
     margin: auto;
-    width:80%;
+    width:850px;
     text-align: justify;
   }
   #overview-bottom-inner div {
-    padding: 30px 28px;
+    padding: 25px 16px;
     display: inline-block;
+  }
+  .overview-div {
+    position: relative;
+    transform: rotate(0deg) scale(1) skew(40deg) translate(90px);
+    -webkit-transform: rotate(0deg) scale(1) skew(40deg) translate(90px);
+    -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(90px);
+    -o-transform: rotate(0deg) scale(1) skew(40deg) translate(90px);
+    -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(90px);
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .overview-div-text{
+    position: absolute;
+    transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    right: 15%;
+    width: 58%;
+    margin-top: 25%;
+    z-index: 3;
   }
 
   /* Section 2 - Students
@@ -295,7 +347,7 @@
 
   /* Section 6 - Accountability
   * --------------------------------------- */
-  .section6-div-text {
+  .accountability-div-text {
     position: absolute;
     transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
     -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
@@ -410,25 +462,28 @@
 	<div id="tech-diversity">
 		<div class="section" id="overview-section">
           <div class="overview-left"><img src="img/tech-diversity-logo.png" width="428px" height="130px" style="float:right;"/><p><button type="button" style="float:right;">Apply Today</button></div>
-          <div class="overview-right"><p>The Tech Diversity Scholarship is the product of a public-private
-            partnership of organizations committed to providing access to technology education for all.
-            The scholarship is designed to remove financial barriers for people who are underrepresented
-            in the technology industry, including but not limited to: women, people of color, military
-            personnel and people with disabilities. Financially-eligible students will be considered and
-            may be eligible to receive a full-ride scholarship to attend a full-time code school and take
-            the first step toward a fulfilling career in technology.</p>
+            <div class="overview-div">
+              <div class="overview-div-text">
+              <p>The Tech Diversity Scholarship is the product of a public-private
+              partnership of organizations committed to providing access to technology education for all.
+              The scholarship is designed to remove financial barriers for people who are underrepresented
+              in the technology industry, including but not limited to: women, people of color, military
+              personnel and people with disabilities. Financially-eligible students will be considered and
+              may be eligible to receive a full-ride scholarship to attend a full-time code school and take
+              the first step toward a fulfilling career in technology.</p>
+             </div>
            </div>
-           <div id="overview-bottom">
-              <div id="overview-bottom-inner">
-                <div><img src="img/wsj-logo.png"/></div>
-                <div><img src="img/white-house-logo.png"/></div>
-                <div><img src="img/nbc-logo.png"/></div>
-                <div><img src="img/fastco-logo.png"/></div>
-                <div><img src="img/cnn-logo.png"/></div>
-                <div><img src="img/atlantic-logo.png"/></div>
-                <div><img src="img/abc-logo.png"/></div>
-              </div>
+         <div id="overview-bottom">
+            <div id="overview-bottom-inner">
+              <div><img src="img/wsj-logo.png"/></div>
+              <div><img src="img/white-house-logo.png"/></div>
+              <div><img src="img/nbc-logo.png"/></div>
+              <div><img src="img/fastco-logo.png"/></div>
+              <div><img src="img/cnn-logo.png"/></div>
+              <div><img src="img/atlantic-logo.png"/></div>
+              <div><img src="img/abc-logo.png"/></div>
             </div>
+        </div>
 		</div>
 		<div class="section" id="students-section">
       <div class="section-frame">
@@ -542,7 +597,7 @@
 
     <div class="section" id="accountability-section">
       <div class="section-div">
-        <div class="section6-div-text" id="white">
+        <div class="accountability-div-text" id="white">
           <h4>The Commitment:</h4>
           <h1>Accountability</h1>
           <p>The outcomes of the scholarship program will be audited by a third party.
