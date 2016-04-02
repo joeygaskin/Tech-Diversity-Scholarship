@@ -282,7 +282,14 @@
     display: inline-block;
     padding: 20px;
   }
-
+  .overview-response-2 {
+    display:none;
+    right:0px;
+  }
+  .overview-response-2 div {
+    display: block;
+    padding: 20px;
+  }
   /* Section 2 - Students
   * --------------------------------------- */
   .students-success-story {
@@ -616,6 +623,29 @@
       margin: 0 auto;
     }
   }
+  @media screen and  (max-width:1080px){
+    .overview-response {
+      display: none;
+    }
+    .overview-response-2 {
+      display: block;
+    }
+    .overview-div-text{
+      margin-top: 100px;
+    }
+  }
+  @media screen and  (max-width:1040px){
+    #footer-right  {
+      width: 40%;
+    }
+    #footer-left  {
+      width: 60%;
+    }
+    #footer-right input {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
 </style>
 
 </head>
@@ -636,7 +666,12 @@
               personnel and people with disabilities. Financially-eligible students will be considered and
               may be eligible to receive a full-ride scholarship to attend a full-time code school and take
               the first step toward a fulfilling career in technology.</p>
+              <div class="overview-response-2">
+              <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px" style="float:right;"/></div>
+              <div><button type="button" style="float:right;">Apply Today</button></div>
+            </div>
              </div>
+
            </div>
          <div id="overview-bottom">
             <div id="overview-bottom-inner">
