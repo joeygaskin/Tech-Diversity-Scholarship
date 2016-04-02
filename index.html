@@ -231,7 +231,7 @@
     width: 100%;
     height: 120px;
     background-color: #526C79;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     z-index: 4;
   }
@@ -266,6 +266,21 @@
     width: 58%;
     margin-top: 25%;
     z-index: 3;
+  }
+  .overview-response {
+    display:none;
+    position: absolute;
+    right:0px;
+    margin-top: 80px;
+    transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(0px);
+  }
+  .overview-response div {
+    display: inline-block;
+    padding: 20px;
   }
 
   /* Section 2 - Students
@@ -470,8 +485,37 @@
       -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
       -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
     }
+    #overview-section {
+      background: url(img/overview-main-image-2.png) no-repeat center center;
+      background-size: cover;
+    }
+    .overview-left {
+      display: none;
+    }
+    .overview-response {
+      display: block;
+    }
+    .overview-div-text {
+    right: 150px;
+    width: 500px;
+    margin-top: 200px;
+    }
   }
+
   @media screen and  (max-width:1225px){
+    .section-banner {
+      right: -275px;
+    }
+    .section-div {
+      transform: rotate(0deg) scale(1) skew(40deg) translate(-550px);
+      -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-550px);
+      -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-550px);
+      -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-550px);
+      -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-550px);
+    }
+
+  }
+  @media screen and  (max-width:1181px){
     .section-banner {
       right: 0px;
     }
@@ -482,11 +526,11 @@
       display: block;
     }
     .section-div {
-      transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
-      -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-500px);
-      -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
-      -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
-      -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+      transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
+      -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-450px);
+      -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
+      -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
+      -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
     }
   }
 </style>
@@ -497,6 +541,10 @@
 		<div class="section" id="overview-section">
           <div class="overview-left"><img src="img/tech-diversity-logo.png" width="428px" height="130px" style="float:right;"/><p><button type="button" style="float:right;">Apply Today</button></div>
             <div class="overview-div">
+              <div class="overview-response">
+              <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px" style="float:right;"/></div>
+              <div><button type="button" style="float:right;">Apply Today</button></div>
+            </div>
               <div class="overview-div-text">
               <p>The Tech Diversity Scholarship is the product of a public-private
               partnership of organizations committed to providing access to technology education for all.
