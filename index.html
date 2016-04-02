@@ -6,7 +6,7 @@
   <meta name="description" content="The Tech Diversity Scholarship provides access to technology education for all." />
   <meta name="keywords"  content="tech,divesity,scholarships,technology,education,school,college,financial-aid,minorities,women,disabled,military" />
 	<meta name="Resource-type" content="Document" />
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600italic,600" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic" />
@@ -19,7 +19,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
-      <!-- ####################################################################################################
+<!-- ###################################################################################################
     ####################################################################################################
     ####################################################################################################
     ###      ,#.   #####      ############  ########     ####  ########################  ###############
@@ -126,7 +126,7 @@
   .section-div {
     position: relative;
     transform: rotate(0deg) scale(1) skew(40deg) translate(-650px);
-    -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-650);
+    -webkit-transform: rotate(0deg) scale(1) skew(40deg) translate(-650px);
     -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-650px);
     -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-650px);
     -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-650px);
@@ -141,14 +141,14 @@
     -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
     -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
     -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
-    left: 60%;
-    width: 33%;
+    right: 55px;
+    width: 440px;
     margin-top: 200px;
     z-index:3;
   }
   .section-banner {
     position: absolute;
-    right: -130px;
+    right: -150px;
     top: 0px;
     height: 100%;
     opacity:0;
@@ -156,6 +156,12 @@
     -webkit-transition: opacity 2s; /* Safari and Chrome */
     -o-transition: opacity 2s;
     transition: opacity 2s;
+  }
+  #section-banner-1 {
+    display: block;
+  }
+  #section-banner-2 {
+    display: none;
   }
   .section-img {
     opacity:0;
@@ -350,8 +356,8 @@
     -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
     -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
     -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
-    left: 60%;
-    width: 33%;
+    right: 55px;
+    width: 440px;
     margin-top: 200px;
     z-index:3;
   }
@@ -451,6 +457,38 @@
     font-weight: 600;
   }
 
+  /* Footer
+  * --------------------------------------- */
+  @media screen and  (max-width:1260px){
+    .section-banner {
+      right: -200px;
+    }
+    .section-div {
+      transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
+      -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-600px);
+      -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
+      -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
+      -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
+    }
+  }
+  @media screen and  (max-width:1225px){
+    .section-banner {
+      right: 0px;
+    }
+    #section-banner-1 {
+      display: none;
+    }
+    #section-banner-2 {
+      display: block;
+    }
+    .section-div {
+      transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+      -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-500px);
+      -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+      -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+      -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+    }
+  }
 </style>
 
 </head>
@@ -539,7 +577,8 @@
         <div class="section-interest-white">Interested in becoming an Education Partner? <img src="img/arrow-white.png"/></div>
         </div>
       </div>
-    <img class="section-banner" data-src="img/education-main-image.png" onload="this.style.opacity='1';" />
+    <img class="section-banner" id="section-banner-1" data-src="img/education-main-image.png" onload="this.style.opacity='1';" />
+    <img class="section-banner" id="section-banner-2" data-src="img/education-main-image-2.png" onload="this.style.opacity='1';" />
     </div>
 
     <div class="section" id="employment-section">
@@ -563,7 +602,8 @@
         <div class="section-interest-blue">Interested in becoming an Employment Partner? <img src="img/arrow-blue.png"/></div>
         </div>
       </div>
-      <img class="section-banner" data-src="img/employment-main-image.png" onload="this.style.opacity='1';" />
+      <img class="section-banner" id="section-banner-1" data-src="img/employment-main-image.png" onload="this.style.opacity='1';" />
+      <img class="section-banner" id="section-banner-2" data-src="img/employment-main-image-2.png" onload="this.style.opacity='1';" />
 		</div>
 
 
@@ -587,7 +627,8 @@
         <div class="section-interest-white">Interested in becoming a Support Organization? <img src="img/arrow-white.png"/></div>
         </div>
       </div>
-      <img class="section-banner" data-src="img/org-main-image.png" onload="this.style.opacity='1';" />
+      <img class="section-banner" id="section-banner-1" data-src="img/org-main-image.png" onload="this.style.opacity='1';" />
+      <img class="section-banner" id="section-banner-2" data-src="img/org-main-image-2.png" onload="this.style.opacity='1';" />
   	</div>
 
 
@@ -607,8 +648,9 @@
              </div>
         </div>
       </div>
-      <img class="section-banner" data-src="img/acc-main-image.png" onload="this.style.opacity='1';" />
-		</div>
+      <img class="section-banner" id="section-banner-1" data-src="img/acc-main-image.png" onload="this.style.opacity='1';" />
+      <img class="section-banner" id="section-banner-2" data-src="img/acc-main-image-2.png" onload="this.style.opacity='1';" />
+    </div>
 
 
     <div class="section" id="locations-section">
