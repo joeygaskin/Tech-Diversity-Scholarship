@@ -136,12 +136,12 @@
   }
   .section-div-text{
     position: absolute;
-    transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
-    -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
-    -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
-    -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
-    -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
-    right: 55px;
+    transform: rotate(0deg) scale(1) skew(-40deg) translate(-25px);
+    -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(-25px);
+    -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(-25px);
+    -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(-25px);
+    -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(-25px);
+    right: 62px;
     width: 440px;
     margin-top: 200px;
     z-index:3;
@@ -293,20 +293,35 @@
     float: left;
     padding: 5px;
   }
+  #students-photo-size {
+
+  }
   .students-bio {
     float:right;
     width: 50%;
   }
   #students-intro {
-  margin-top: 100px;
+    margin-top: 100px;
   }
-  #students-story {
+  #students-story-1 {
+    display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 600;
     opacity: 0.49;
   }
-  #students-story img {
+  #students-story-1 img {
+    padding-left: 8px;
+    vertical-align: middle;
+  }
+  #students-story-2 {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.49;
+  }
+  #students-story-2 img {
     padding-left: 8px;
     vertical-align: middle;
   }
@@ -371,7 +386,7 @@
     -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
     -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
     -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(30px);
-    right: 55px;
+    right: 62px;
     width: 440px;
     margin-top: 200px;
     z-index:3;
@@ -472,7 +487,7 @@
     font-weight: 600;
   }
 
-  /* Footer
+  /* Media Queries
   * --------------------------------------- */
   @media screen and  (max-width:1260px){
     .section-banner {
@@ -484,6 +499,18 @@
       -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
       -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
       -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-600px);
+    }
+    .section-div-text{
+      position: absolute;
+      transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+      -webkit-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+      -moz-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+      -o-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+      -ms-transform: rotate(0deg) scale(1) skew(-40deg) translate(-35px);
+      right: 62px;
+      width: 440px;
+      margin-top: 200px;
+      z-index:3;
     }
     #overview-section {
       background: url(img/overview-main-image-2.png) no-repeat center center;
@@ -499,6 +526,42 @@
     right: 150px;
     width: 500px;
     margin-top: 200px;
+    }
+    #students-intro {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    }
+    .section-frame {
+    width: 70%;
+    }
+    .section-left {
+    float: none;
+    width: auto;
+    margin-left: auto;
+    }
+    .section-right {
+    float: none;
+    width: 900px;
+    }
+    .students-success-story {
+    width: 49%;
+    display: inline-block;
+    }
+    #students-photo-resize {
+    display:block;
+    }
+    .section h4 {
+    margin: 0;
+    }
+    #students-story-1 {
+      display: none;
+    }
+    #students-story-2 {
+      display: block;
+    }
+    #students-photo-size {
+      width: 185px;
+      height: auto;
     }
   }
 
@@ -526,11 +589,31 @@
       display: block;
     }
     .section-div {
+      transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+      -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-500px);
+      -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+      -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+      -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-500px);
+    }
+  }
+  @media screen and  (max-width:1130px){
+    .section-div {
       transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
       -webkit-transform: rotate(0deg) scale(1) skew(40) translate(-450px);
       -moz-transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
       -o-transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
       -ms-transform: rotate(0deg) scale(1) skew(40deg) translate(-450px);
+    }
+  }
+  @media screen and  (max-width:1100px){
+    #fp-nav ul, .fp-slidesNav ul {
+      display: none;
+    }
+    .section-frame {
+      width: 90%;
+    }
+    .students-intro {
+      margin: 0 auto;
     }
   }
 </style>
@@ -580,26 +663,28 @@
         <div class="section-right">
             <div class="students-success-story">
               <div class="students-photo">
-              <img class="section-img" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
+              <img class="section-img" id="students-photo-size" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
+              <p id="students-story-2">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
               </div>
               <div class="students-bio">
               <h4>Web Developer</h4>
               <h3>LeRoy Gardner</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p id="students-story">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
+              <p id="students-story-1">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
               </div>
           </div>
           <div class="students-success-story">
               <div class="students-photo">
-              <img class="section-img" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
+              <img class="section-img" id="students-photo-size" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
+              <p id="students-story-2">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
               </div>
               <div class="students-bio">
               <h4>Mobile Developer</h4>
               <h3>Astrid Countee</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p id="students-story">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+              <p id="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
               </div>
           </div>
         </div>
