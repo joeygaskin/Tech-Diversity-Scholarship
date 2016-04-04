@@ -146,6 +146,9 @@
     margin-top: 200px;
     z-index:3;
   }
+  .section-mobile-img {
+    display: none;
+  }
   .section-banner {
     position: absolute;
     right: -150px;
@@ -690,9 +693,6 @@
       margin-top: 200px;
       z-index:3;
     }
-    .section-div {
-      overflow: visible;
-    }
   }
 
   @media screen and  (max-width:960px){
@@ -727,15 +727,15 @@
     width: auto;
     }
     .section-div-text{
-      right: 0px;
+      right: 30px;
       margin-top: 170px;
     }
     .accountability-div-text{
-      right: 0px;
+      right: 30px;
       margin-top: 170px;
     }
   }
-  @media screen and  (max-width:900px){
+  @media screen and  (max-width:945px){
     #overview-bottom-inner {
       width: 725px;
     }
@@ -750,7 +750,7 @@
       display: none;
     }
     #education-section {
-      background: url(img/education-main-full.png) no-repeat 60% 75%;
+      background: url(img/education-main-full.png) no-repeat 60% 90%;
       background-size: cover 100%;
       height:auto;
     }
@@ -760,7 +760,7 @@
       height:auto;
     }
     #organizations-section {
-      background: url(img/org-main-full.png) no-repeat 100% 350%;
+      background: url(img/org-main-full.png) no-repeat 100% 200%;
       background-size: cover 100%;
       height:auto;
     }
@@ -801,7 +801,6 @@
       right: auto;
       margin: 25px auto 45px;
       width: 600px;
-      z-index:3;
     }
     #education-bgcolor {
       background-color: #99B7C5;
@@ -824,10 +823,11 @@
   }
   @media screen and  (max-width:730px){
     .section-div-text{
-      width: 450px;
+      width: 70%;
     }
     .accountability-div-text {
-      width: 450px;
+
+      width: 70%;
     }
     #overview-section {
       background: none;
@@ -883,6 +883,38 @@
       float:none;
     }
   }
+  @media screen and  (max-width:600px){
+    #education-section {
+      background: none;
+    }
+    #employment-section {
+      background: none;
+    }
+    #organizations-section {
+      background: none;
+    }
+    #accountability-section {
+      background: none;
+    }
+    .section-mobile-img {
+    display: block;
+    position: absolute;
+    top:0px;
+    }
+    .section-mobile-img img{
+    width: 100%;
+    height:auto;
+    opacity:0;
+    -moz-transition: opacity 2s; /* Firefox 4 */
+    -webkit-transition: opacity 2s; /* Safari and Chrome */
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+    }
+    .section-div {
+      position: static;
+      margin-top: 70%;
+    }
+  }
   @media screen and  (max-width:587px){
     .section-frame {
       width:70%;
@@ -904,12 +936,20 @@
       width:250%;
     }
     #students-section {
-        height:auto;
-        overflow: visible;
+      overflow: visible;
+    }
+    #education-section {
+      position: relative;
+      height: auto;
+    }
+    #organizations-section {
+      height: 100%;
+
     }
     .students-bio {
     padding-bottom: 10px;
     }
+
   }
 
 </style>
@@ -995,6 +1035,8 @@
     </div>
 
 		<div class="section" id="education-section">
+      <div class="section-mobile-img"><img data-src="img/education-main-mobile.png"onload="this.style.opacity='1';" /></div>
+
       <div class="section-div" id="education-bgcolor">
         <div class="section-div-text" id="white">
           <h4>The Commitment:</h4>
@@ -1018,6 +1060,7 @@
     </div>
 
     <div class="section" id="employment-section">
+      <div class="section-mobile-img"><img data-src="img/employment-main-mobile.png"onload="this.style.opacity='1';" /></div>
       <div class="section-div" id="employment-bgcolor">
         <div class="section-div-text">
           <h4>The Commitment:</h4>
@@ -1044,6 +1087,7 @@
 
 
     <div class="section" id="organizations-section">
+      <div class="section-mobile-img"><img data-src="img/org-main-mobile.png"onload="this.style.opacity='1';" /></div>
       <div class="section-div" id="organizations-bgcolor">
         <div class="section-div-text" id="white">
           <h4>The Commitment:</h4>
@@ -1069,6 +1113,7 @@
 
 
     <div class="section" id="accountability-section">
+      <div class="section-mobile-img"><img data-src="img/acc-main-mobile.png"onload="this.style.opacity='1';" /></div>
       <div class="section-div" id="accountability-bgcolor">
         <div class="accountability-div-text" id="white">
           <h4>The Commitment:</h4>
