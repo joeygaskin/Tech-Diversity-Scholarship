@@ -456,7 +456,6 @@
   #footer-right {
     height: auto;
     float: right;
-    width: 60%;
     margin-top: 40px;
   }
    #footer-top {
@@ -655,10 +654,7 @@
     }
   }
   @media screen and  (max-width:1040px){
-    #footer-right  {
-      width: 40%;
-    }
-    #footer-left  {
+    #footer-left{
       width: 60%;
     }
     #footer-right input {
@@ -764,7 +760,7 @@
       height:auto;
     }
     #organizations-section {
-      background: url(img/org-main-full.png) no-repeat 100% 130%;
+      background: url(img/org-main-full.png) no-repeat 100% 350%;
       background-size: cover 100%;
       height:auto;
     }
@@ -822,6 +818,9 @@
     .section-logo-block {
       display: none;
     }
+    #footer-left{
+      width: 50%;
+    }
   }
   @media screen and  (max-width:730px){
     .section-div-text{
@@ -829,10 +828,6 @@
     }
     .accountability-div-text {
       width: 450px;
-    }
-    #organizations-section {
-      background: url(img/org-main-full.png) no-repeat 100% 250%;
-      background-size: cover 100%;
     }
     #overview-section {
       background: none;
@@ -846,8 +841,8 @@
     }
     #overview-response-3 {
       display: block;
-      margin: 0 auto;
-      padding-bottom: 50px;
+      margin: 10% auto;
+      padding-bottom: 3%;
     }
     .overview-div-text {
       transform: none;
@@ -857,7 +852,6 @@
       -ms-transform: none;
       width: 70%;
       margin: 50px auto;
-      text-align: center;
 
     }
     .overview-div {
@@ -872,6 +866,52 @@
       margin: 0 auto;
     }
   }
+  @media screen and  (max-width:700px){
+    .students-success-story {
+      width:60%;
+    }
+  }
+  @media screen and  (max-width:760px){
+    #footer-frame {
+      width:65%;
+    }
+    #footer-left {
+      float:none;
+      width:100%;
+    }
+    #footer-right {
+      float:none;
+    }
+  }
+  @media screen and  (max-width:587px){
+    .section-frame {
+      width:70%;
+    }
+    .section-right{
+      width:auto;
+    }
+    .students-success-story {
+      width: 90%;
+      height:auto;
+      margin: 0 auto;
+    }
+    .students-photo{
+      float: none;
+      padding-bottom: 10px;
+      width:100%;
+    }
+    .students-photo img{
+      width:250%;
+    }
+    #students-section {
+        height:auto;
+        overflow: visible;
+    }
+    .students-bio {
+    padding-bottom: 10px;
+    }
+  }
+
 </style>
 
 </head>
@@ -1062,8 +1102,8 @@
   		<div id="footer-top">
         <div id="footer-frame">
           <div class="footer-intro" id="footer-left">
-            <h5>Stay in the Loop</h5><p>Sign up for the Tech Diversity Scholarship<br>
-            email list for announcements, new partners, <br>and city additions.
+            <h5>Stay in the Loop</h5><p>Sign up for the Tech Diversity Scholarship
+            email list for announcements, new partners, and city additions.
           </div>
           <div id="footer-right">
             <input type="text" name="mail" value="Email Address" id="footer-right-input">
