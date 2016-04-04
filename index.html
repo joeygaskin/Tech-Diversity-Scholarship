@@ -290,6 +290,10 @@
     display: block;
     padding: 20px;
   }
+  #overview-response-3 {
+    display:none;
+  }
+
   /* Section 2 - Students
   * --------------------------------------- */
   .students-success-story {
@@ -349,6 +353,9 @@
   #education-section {
 
   }
+  #education-bgcolor {
+
+  }
 
   /* Section 4 - Employment
   * --------------------------------------- */
@@ -364,6 +371,9 @@
     padding:5px;
   }
   #employment-section{
+
+  }
+  #employment-bgcolor {
 
   }
 
@@ -383,6 +393,9 @@
   #organizations-section {
 
   }
+  #organizations-bgcolor {
+
+  }
 
   /* Section 6 - Accountability
   * --------------------------------------- */
@@ -399,6 +412,9 @@
     z-index:3;
   }
   #accountability-section {
+
+  }
+  #accountability-bgcolor {
 
   }
 
@@ -723,7 +739,7 @@
       margin-top: 170px;
     }
   }
-  @media screen and  (max-width:895px){
+  @media screen and  (max-width:900px){
     #overview-bottom-inner {
       width: 725px;
     }
@@ -733,6 +749,127 @@
     .overview-div-text {
       right: 75px;
       width: 450px;
+    }
+    #section-banner-2 {
+      display: none;
+    }
+    #education-section {
+      background: url(img/education-main-full.png) no-repeat 60% 75%;
+      background-size: cover 100%;
+      height:auto;
+    }
+    #employment-section {
+      background: url(img/employment-main-full.png) no-repeat 70% 75%;
+      background-size: cover 100%;
+      height:auto;
+    }
+    #organizations-section {
+      background: url(img/org-main-full.png) no-repeat 100% 130%;
+      background-size: cover 100%;
+      height:auto;
+    }
+    #accountability-section {
+      background: url(img/acc-main-full.png) no-repeat center center;
+      background-size: cover 100%;
+      height:auto;
+    }
+    .section-div {
+      position: absolute;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+      bottom: 0px;
+      width: 100%;
+      height: auto;
+    }
+    .section-div-text{
+      position: static;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+      right: auto;
+      margin: 25px auto 25px;
+      width: 600px;
+    }
+    .accountability-div-text {
+      position: static;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+      right: auto;
+      margin: 25px auto 45px;
+      width: 600px;
+      z-index:3;
+    }
+    #education-bgcolor {
+      background-color: #99B7C5;
+    }
+    #employment-bgcolor {
+      background-color: #D8D8D8;
+    }
+    #organizations-bgcolor {
+      background-color: #526C79;
+    }
+    #accountability-bgcolor {
+      background-color: #F8CE76;
+    }
+    .section-logo-block {
+      display: none;
+    }
+  }
+  @media screen and  (max-width:730px){
+    .section-div-text{
+      width: 450px;
+    }
+    .accountability-div-text {
+      width: 450px;
+    }
+    #organizations-section {
+      background: url(img/org-main-full.png) no-repeat 100% 250%;
+      background-size: cover 100%;
+    }
+    #overview-section {
+      background: none;
+      border-top: 10px solid #F8CE76;
+    }
+    #overview-bottom {
+      display:none;
+    }
+    .overview-response-2 {
+      display:none;
+    }
+    #overview-response-3 {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+    .overview-div-text {
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+      width: 70%;
+      margin: 50px auto;
+      text-align: center;
+
+    }
+    .overview-div {
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+      width: 100%;
+      overflow: visible;
+      z-index: 2;
+      margin: 0 auto;
     }
   }
 </style>
@@ -748,6 +885,7 @@
               <div><button type="button" style="float:right;">Apply Today</button></div>
             </div>
               <div class="overview-div-text">
+              <img src="img/tech-diversity-logo-2.png" id="overview-response-3" style="width: 100%; height:auto"/>
               <p>The Tech Diversity Scholarship is the product of a public-private
               partnership of organizations committed to providing access to technology education for all.
               The scholarship is designed to remove financial barriers for people who are underrepresented
@@ -755,6 +893,7 @@
               personnel and people with disabilities. Financially-eligible students will be considered and
               may be eligible to receive a full-ride scholarship to attend a full-time code school and take
               the first step toward a fulfilling career in technology.</p>
+              <div id="overview-response-3"><button type="button">Apply Today</button></div>
               <div class="overview-response-2">
               <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px" style="float:right;"/></div>
               <div><button type="button" style="float:right;">Apply Today</button></div>
@@ -816,7 +955,7 @@
     </div>
 
 		<div class="section" id="education-section">
-      <div class="section-div">
+      <div class="section-div" id="education-bgcolor">
         <div class="section-div-text" id="white">
           <h4>The Commitment:</h4>
           <h1>Education Partners</h1>
@@ -839,7 +978,7 @@
     </div>
 
     <div class="section" id="employment-section">
-      <div class="section-div">
+      <div class="section-div" id="employment-bgcolor">
         <div class="section-div-text">
           <h4>The Commitment:</h4>
           <h1>Employment Partners</h1>
@@ -865,7 +1004,7 @@
 
 
     <div class="section" id="organizations-section">
-      <div class="section-div">
+      <div class="section-div" id="organizations-bgcolor">
         <div class="section-div-text" id="white">
           <h4>The Commitment:</h4>
           <h1>The Support Organizations</h1>
@@ -890,7 +1029,7 @@
 
 
     <div class="section" id="accountability-section">
-      <div class="section-div">
+      <div class="section-div" id="accountability-bgcolor">
         <div class="accountability-div-text" id="white">
           <h4>The Commitment:</h4>
           <h1>Accountability</h1>
