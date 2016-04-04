@@ -229,6 +229,7 @@
     background: url(img/overview-main-image.png) no-repeat center center;
     background-size: cover;
     border-top: 10px solid #F8CE76;
+    overflow: visible;
   }
   #overview-bottom {
     width: 100%;
@@ -760,7 +761,7 @@
       height:auto;
     }
     #organizations-section {
-      background: url(img/org-main-full.png) no-repeat 100% 200%;
+      background: url(img/org-main-full.png) no-repeat 100% 100%;
       background-size: cover 100%;
       height:auto;
     }
@@ -832,6 +833,7 @@
     #overview-section {
       background: none;
       border-top: 10px solid #F8CE76;
+
     }
     #overview-bottom {
       display:none;
@@ -841,17 +843,19 @@
     }
     #overview-response-3 {
       display: block;
-      margin: 10% auto;
-      padding-bottom: 3%;
+      margin: 0 auto;
+
     }
     .overview-div-text {
+      position: static;
       transform: none;
       -webkit-transform: none;
       -moz-transform: none;
       -o-transform: none;
       -ms-transform: none;
       width: 70%;
-      margin: 50px auto;
+      margin:25px auto;
+      padding-top: 100px;
 
     }
     .overview-div {
