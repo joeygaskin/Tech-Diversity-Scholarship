@@ -86,7 +86,13 @@
   #fp-nav.custom .fp-tooltip{
     color: #fff;
   }
-
+  #silentMoveTo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.49;
+    cursor:pointer;
+  }
   /* Arrow Controls
   * --------------------------------------- */
   .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {border-color: transparent #CCC!important;}
@@ -312,6 +318,35 @@
     float: left;
     padding: 5px;
   }
+  .students-pic {
+    margin:40% auto;
+  }
+  .students-pic div {
+    display:block;
+  }
+  .students-left {
+    float: left;
+    width: 30%;
+  }
+  .students-right {
+    float: left;
+    width:60%;
+    margin-top:10%;
+  }
+  .fp-viewing-students-3 .fp-tableCell {
+    vertical-align: inherit;
+  }
+  #students-home {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.49;
+    cursor:pointer;
+  }
+  #students-home img {
+    padding-left: 8px;
+    vertical-align: middle;
+  }
   #students-photo-size {
 
   }
@@ -322,14 +357,14 @@
   #students-intro {
     margin-top: 100px;
   }
-  #students-story-1 {
+  .students-story-1 {
     display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 600;
     opacity: 0.49;
   }
-  #students-story-1 img {
+  .students-story-1 img {
     padding-left: 8px;
     vertical-align: middle;
   }
@@ -498,7 +533,7 @@
     .section h4 {
       margin: 0;
     }
-    #students-story-1 {
+    .students-story-1 {
       display: none;
     }
     #students-story-2 {
@@ -615,7 +650,7 @@
       display:block;
       width: 70%;
     }
-    #students-story-1 {
+    .students-story-1 {
       display: block;
     }
     #students-story-2 {
@@ -854,7 +889,7 @@
                   <h3>LeRoy Gardner</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p id="students-story-1">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-1" id="leroy-story">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                 </div>
                 <div class="students-success-story">
@@ -867,14 +902,14 @@
                   <h3>Astrid Countee</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p id="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                 </div>
             </div>
           </div>
         </div>
 
-        <div class="slide" id="others">
+        <div class="slide">
           <div class="section-frame">
             <div class="section-right">
                 <div class="students-success-story">
@@ -887,7 +922,7 @@
                   <h3>LeRoy Gardner</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p id="students-story-1">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-1">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                 </div>
                 <div class="students-success-story">
@@ -900,7 +935,7 @@
                   <h3>Astrid Countee</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p id="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                 </div>
             </div>
@@ -915,7 +950,7 @@
                   <h3>LeRoy Gardner</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p id="students-story-1">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-1">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                 </div>
                 <div class="students-success-story">
@@ -928,7 +963,7 @@
                   <h3>Astrid Countee</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p id="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                 </div>
             </div>
@@ -937,7 +972,43 @@
         <div class="slide">
           Slide3
         </div>
+        <div class="slide">
+          <div class="section-frame">
+            <div class="students-left">
+                <div class="students-pic">
+                <div><img class="section-img" id="students-photo-size" data-src="img/leroy-story.png" onload="this.style.opacity='1';" /></div>
+                <div><p id="students-home">Read More Stories like LeRoy's <img src="img/arrow-blue.png"/></p></div>
+              </div>
+            </div>
+            <div class="students-right"><h1>LeRoy Gardner's Story</h1><p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                 deserunt mollit anim id est laborum.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum.</p>
+              </div>
+        </div>
+        <div class="slide">
+          Slide5
+        </div>
+        <div class="slide">
+          Slide6
+        </div>
+        <div class="slide">
+          Slide7
+        </div>
+        <div class="slide">
+          Slide8
+        </div>
 
+      </div>
       </div>
 
       <div class="section" id="education-section">
