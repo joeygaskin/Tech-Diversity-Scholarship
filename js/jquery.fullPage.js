@@ -2864,6 +2864,14 @@ $(document).ready(function() {
             }else{
               $('#fp-nav').addClass('custom');
             }
-          }
+          },
+          afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                      var loadedSlide = $(this);
+                      //first slide of the second section
+            if(anchorLink == 'students' && slideIndex == 1){
+                $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'right');
+            } else {$.fn.fullpage.setKeyboardScrolling(true,'right');}
+          },
+
 				});
 			});
