@@ -2844,6 +2844,10 @@ $(document).ready(function() {
             } else {$.fn.fullpage.setKeyboardScrolling(true,'left, right');
             }
 
+            if(anchorLink == 'students' && slideIndex == 2){
+                $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+            }
+
             if(anchorLink == 'students' && slideIndex == 3){
                 $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
             }
@@ -2853,8 +2857,14 @@ $(document).ready(function() {
 
       //adding the action to the button
 $(document).on('click', '#leroy-story', function(){
-  $.fn.fullpage.silentMoveTo('students', 3);
+  $.fn.fullpage.silentMoveTo('students', 2);
 });
+
+//adding the action to the button
+$(document).on('click', '#astrid-story', function(){
+$.fn.fullpage.silentMoveTo('students', 3);
+});
+
 
 $(document).on('click', '#students-home', function(){
   $.fn.fullpage.silentMoveTo('students', 0);

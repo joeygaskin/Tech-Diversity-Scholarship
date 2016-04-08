@@ -93,6 +93,13 @@
     opacity: 0.49;
     cursor:pointer;
   }
+  #astrid-story{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.49;
+    cursor:pointer;
+  }
   /* Arrow Controls
   * --------------------------------------- */
   .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {border-color: transparent #CCC!important;}
@@ -333,6 +340,9 @@
     width:60%;
     margin-top:10%;
   }
+  .fp-viewing-students-2 .fp-tableCell {
+    vertical-align: inherit;
+  }
   .fp-viewing-students-3 .fp-tableCell {
     vertical-align: inherit;
   }
@@ -344,7 +354,7 @@
     cursor:pointer;
   }
   #students-home img {
-    padding-left: 8px;
+    padding-right: 8px;
     vertical-align: middle;
   }
   #students-photo-size {
@@ -368,14 +378,14 @@
     padding-left: 8px;
     vertical-align: middle;
   }
-  #students-story-2 {
+  .students-story-2 {
     display: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 600;
     opacity: 0.49;
   }
-  #students-story-2 img {
+  .students-story-2 img {
     padding-left: 8px;
     vertical-align: middle;
   }
@@ -536,7 +546,7 @@
     .students-story-1 {
       display: none;
     }
-    #students-story-2 {
+    .students-story-2 {
       display: block;
     }
     #students-photo-size {
@@ -653,7 +663,7 @@
     .students-story-1 {
       display: block;
     }
-    #students-story-2 {
+    .students-story-2 {
       display: none;
     }
     #students-photo-size {
@@ -882,7 +892,7 @@
                 <div class="students-success-story">
                   <div class="students-photo">
                   <img class="section-img" id="students-photo-size" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
-                  <p id="students-story-2">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-2" id="leroy-story">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                   <div class="students-bio">
                   <h4>Web Developer</h4>
@@ -895,14 +905,14 @@
                 <div class="students-success-story">
                   <div class="students-photo">
                   <img class="section-img" id="students-photo-size" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
-                  <p id="students-story-2">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-2" id="astrid-story">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                   <div class="students-bio">
                   <h4>Mobile Developer</h4>
                   <h3>Astrid Countee</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p class="students-story-1">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-1" id="astrid-story">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                 </div>
             </div>
@@ -915,7 +925,7 @@
                 <div class="students-success-story">
                   <div class="students-photo">
                   <img class="section-img" id="students-photo-size" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
-                  <p id="students-story-2">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-2">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                   <div class="students-bio">
                   <h4>Web Developer</h4>
@@ -928,7 +938,7 @@
                 <div class="students-success-story">
                   <div class="students-photo">
                   <img class="section-img" id="students-photo-size" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
-                  <p id="students-story-2">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-2">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                   <div class="students-bio">
                   <h4>Mobile Developer</h4>
@@ -943,7 +953,7 @@
                 <div class="students-success-story">
                   <div class="students-photo">
                   <img class="section-img" id="students-photo-size" data-src="img/leroy-story.png" onload="this.style.opacity='1';" />
-                  <p id="students-story-2">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-2">Read LeRoy's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                   <div class="students-bio">
                   <h4>Web Developer</h4>
@@ -956,7 +966,7 @@
                 <div class="students-success-story">
                   <div class="students-photo">
                   <img class="section-img" id="students-photo-size" data-src="img/astrid-story.png"onload="this.style.opacity='1';" />
-                  <p id="students-story-2">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
+                  <p class="students-story-2">Read Astrid's full story <img src="img/arrow-blue.png"/></p>
                   </div>
                   <div class="students-bio">
                   <h4>Mobile Developer</h4>
@@ -970,14 +980,11 @@
           </div>
         </div>
         <div class="slide">
-          Slide3
-        </div>
-        <div class="slide">
           <div class="section-frame">
             <div class="students-left">
                 <div class="students-pic">
-                <div><img class="section-img" id="students-photo-size" data-src="img/leroy-story.png" onload="this.style.opacity='1';" /></div>
-                <div><p id="students-home">Read More Stories like LeRoy's <img src="img/arrow-blue.png"/></p></div>
+                <div><img class="section-img" data-src="img/leroy-story.png" onload="this.style.opacity='1';" /></div>
+                <div><p id="students-home"><img src="img/back-arrow-blue.png"/> Read More Stories like LeRoy's</p></div>
               </div>
             </div>
             <div class="students-right"><h1>LeRoy Gardner's Story</h1><p>
@@ -994,6 +1001,31 @@
                   nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                   deserunt mollit anim id est laborum.</p>
               </div>
+            </div>
+        </div>
+        <div class="slide">
+          <div class="section-frame">
+            <div class="students-left">
+                <div class="students-pic">
+                <div><img class="section-img" data-src="img/astrid-story.png" onload="this.style.opacity='1';" /></div>
+                <div><p id="students-home"><img src="img/back-arrow-blue.png"/> Read More Stories like Astrid's</p></div>
+              </div>
+            </div>
+            <div class="students-right"><h1>Astrid Countee's Story</h1><p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                 deserunt mollit anim id est laborum.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
         </div>
         <div class="slide">
           Slide5
@@ -1007,8 +1039,6 @@
         <div class="slide">
           Slide8
         </div>
-
-      </div>
       </div>
 
       <div class="section" id="education-section">
