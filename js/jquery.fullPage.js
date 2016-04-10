@@ -129,7 +129,7 @@
             loopHorizontal: true,
             continuousVertical: false,
             normalScrollElements: null,
-            scrollOverflow: false,
+            scrollOverflow: true,
             scrollOverflowHandler: defaultScrollHandler,
             touchSensitivity: 5,
             normalScrollElementTouchThreshold: 5,
@@ -2851,6 +2851,22 @@ $(document).ready(function() {
             if(anchorLink == 'students' && slideIndex == 3){
                 $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
             }
+
+            if(anchorLink == 'students' && slideIndex == 4){
+                $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+            }
+
+            if(anchorLink == 'students' && slideIndex == 5){
+                $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+            }
+
+            if(anchorLink == 'students' && slideIndex == 6){
+                $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+            }
+
+            if(anchorLink == 'students' && slideIndex == 7){
+                $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+            }
           },
 				});
 			});
@@ -2865,6 +2881,25 @@ $(document).on('click', '#astrid-story', function(){
 $.fn.fullpage.silentMoveTo('students', 3);
 });
 
+//adding the action to the button
+$(document).on('click', '#andrew-story', function(){
+$.fn.fullpage.silentMoveTo('students', 4);
+});
+
+//adding the action to the button
+$(document).on('click', '#bernard-story', function(){
+$.fn.fullpage.silentMoveTo('students', 5);
+});
+
+//adding the action to the button
+$(document).on('click', '#michelle-story', function(){
+$.fn.fullpage.silentMoveTo('students', 6);
+});
+
+//adding the action to the button
+$(document).on('click', '#wonman-story', function(){
+$.fn.fullpage.silentMoveTo('students', 7);
+});
 
 $(document).on('click', '#students-home', function(){
   $.fn.fullpage.silentMoveTo('students', 0);
