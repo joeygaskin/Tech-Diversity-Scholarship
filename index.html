@@ -306,7 +306,6 @@
     background: url(img/overview-main-image.png) no-repeat center center;
     background-size: cover;
     border-top: 10px solid #F8CE76;
-    overflow: visible;
     position: relative;
   }
   #overview-bottom {
@@ -315,7 +314,6 @@
     background-color: #526C79;
     position: absolute;
     bottom: 0px;
-    z-index: 4;
   }
   #overview-bottom-inner {
     margin: auto;
@@ -447,26 +445,47 @@
   .fp-viewing-overview-1 div.fp-controlArrow.fp-next{
     display: none !important;
   }
+  .fp-viewing-overview-1 div.fp-controlArrow.fp-prev{
+    display: block !important;
+  }
   .fp-viewing-students-1 div.fp-controlArrow.fp-next{
     display: none !important;
   }
   .fp-viewing-students-2 .fp-tableCell {
     vertical-align: inherit;
   }
+  .fp-viewing-students-2 div.fp-controlArrow.fp-next{
+    display: none !important;
+  }
   .fp-viewing-students-3 .fp-tableCell {
     vertical-align: inherit;
+  }
+  .fp-viewing-students-3 div.fp-controlArrow.fp-next{
+    display: none !important;
   }
   .fp-viewing-students-4 .fp-tableCell {
     vertical-align: inherit;
   }
+  .fp-viewing-students-4 div.fp-controlArrow.fp-next{
+    display: none !important;
+  }
   .fp-viewing-students-5 .fp-tableCell {
     vertical-align: inherit;
+  }
+  .fp-viewing-students-5 div.fp-controlArrow.fp-next{
+    display: none !important;
   }
   .fp-viewing-students-6 .fp-tableCell {
     vertical-align: inherit;
   }
+  .fp-viewing-students-6 div.fp-controlArrow.fp-next{
+    display: none !important;
+  }
   .fp-viewing-students-7 .fp-tableCell {
     vertical-align: inherit;
+  }
+  .fp-viewing-students-7 div.fp-controlArrow.fp-next{
+    display: none !important;
   }
   #students-home {
     font-family: 'Open Sans', sans-serif;
@@ -530,7 +549,7 @@
     margin: 0 auto;
   }
   #locations-section {
-
+  position: relative;
   }
 
   /* Footer
@@ -1177,8 +1196,8 @@
   <body>
   	<div id="tech-diversity">
 
-      <div class="section" id="overview-section">
-        <!-- <div class="slide" id="overview-section"> -->
+      <div class="section">
+        <div class="slide" id="overview-section">
         <div class="overview-left">
           <div><img src="img/tech-diversity-logo.png" width="428px" height="130px"/></div>
           <div><button type="button" id="applytoday">Apply Today</button></div>
@@ -1216,7 +1235,7 @@
           </div>
         </div>
       </div>
-        <!-- <div class="slide" id="overview-app-border">
+        <div class="slide" id="overview-app-border">
           <div id="overview-app">
           <div><h1>Apply for the Tech Diversity Scholarship</h1><p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -1240,7 +1259,7 @@
     <button type="submit">Submit Form</button>
 </form></div>
       </div>
-        </div> -->
+        </div>
       </div>
 
       <div class="section" id="students-section">

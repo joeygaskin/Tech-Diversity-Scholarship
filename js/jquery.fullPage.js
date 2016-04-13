@@ -2837,14 +2837,29 @@ $(document).ready(function() {
             }
 
           },
+
+          afterLoad: function(anchorLink, index){
+             var loadedSection = $(this);
+
+             //using index
+             if(index == 1){
+                 $( ".fp-next" ).hide();
+             } else if (index == 2){
+                 $( ".fp-next" ).show();
+               }
+           },
+
+
+
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
                       var loadedSlide = $(this);
                       //first slide of the second section
 
             if(anchorLink == 'students' && slideIndex == 1){
                 $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'right');
-            } else {$.fn.fullpage.setKeyboardScrolling(true,'left, right');
-            }
+            } else if (index == 2){$.fn.fullpage.setKeyboardScrolling(true,'right');
+          }
+
 
             if(anchorLink == 'students' && slideIndex == 2){
                 $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
@@ -2876,29 +2891,49 @@ $(document).ready(function() {
            var leavingSection = $(this);
 
            //after leaving section 2
-           if(index == 1 && direction =='down'){
+           if(index == 2 && direction =='down'){
                $( ".fp-next" ).hide();
            }
          },
 
+            onSlideLeave: function(anchorLink, index, slideIndex, direction){
+               var leavingSlide = $(this);
 
+
+                 if(anchorLink == 'students' && slideIndex == 1 && direction =='down, up'){
+                   $( ".fp-next" ).hide();
+                 }
+
+             },
+
+
+        //   onLeave: function(index, nextIndex, direction){
+        //    var leavingSection = $(this);
+        //
+        //    //after leaving section 2
+        //    if(index == 1 && direction =='down'){
+        //        $( ".fp-next" ).hide();
+        //    }
+        //  },
+        //
+        //
         //  afterLoad: function(anchorLink, index, slideIndex){
         //     var loadedSection = $(this);
-         //
+        //
         //     //using index
         //     if(index == 2){
         //         $( ".fp-next" ).show();
         //     }
         //   },
-         //
+        //
         //  onSlideLeave: function(anchorLink, index, slideIndex, direction){
         //     var leavingSlide = $(this);
-         //
-         //
+        //
+        //
         //       if(index == 2 && slideIndex == 1 && direction =='down, up'){
         //         $( ".fp-next" ).hide();
         //       }
-         //
+        //
         //   },
 
 
