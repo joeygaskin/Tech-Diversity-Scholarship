@@ -303,6 +303,9 @@
     margin-right: 50px;
   }
   #overview-section {
+    
+  }
+  #overview-slide {
     background: url(img/overview-main-image.png) no-repeat center center;
     background-size: cover;
     border-top: 10px solid #F8CE76;
@@ -742,7 +745,7 @@
       margin-bottom:60px;
       margin-top: 4%;
     }
-    #overview-section {
+    #overview-slide {
       background: url(img/overview-main-image-2.png) no-repeat center center;
       background-size: cover;
     }
@@ -971,7 +974,7 @@
     }
   }
   @media screen and  (max-width:853px){
-    #overview-section {
+    #overview-slide {
       background: none;
       border-top: 10px solid #F8CE76;
       height: auto !important;
@@ -1034,16 +1037,16 @@
      margin: auto;
     }
   }
+  @media screen and  (max-height:750px){
+    .overview-app {
+      width: 90%;
+    }
+  }
   @media screen and  (max-width:730px){
     #overview-bottom {
       display:none;
     }
   }
-  /*@media screen and  (max-height:730px){
-    .overview-div-text{
-      margin-top: 100px;
-    }
-  }*/
   @media screen and  (max-width:700px){
     .students-success-story {
       width:60%;
@@ -1147,7 +1150,7 @@
     }
   }
   @media screen and  (max-height:414px){
-    #overview-section {
+    #overview-slide {
       background: none;
       border-top: 10px solid #F8CE76;
     }
@@ -1196,8 +1199,8 @@
   <body>
   	<div id="tech-diversity">
 
-      <div class="section">
-        <div class="slide" id="overview-section">
+      <div class="section" id="overview-section">
+        <div class="slide" id="overview-slide">
         <div class="overview-left">
           <div><img src="img/tech-diversity-logo.png" width="428px" height="130px"/></div>
           <div><button type="button" id="applytoday">Apply Today</button></div>
