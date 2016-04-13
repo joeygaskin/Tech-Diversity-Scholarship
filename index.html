@@ -462,7 +462,7 @@
     margin-right: 50px;
   }
   #overview-section {
-
+    height: auto !important;
   }
   #overview-slide {
     background: url(img/overview-main-image.png) no-repeat center center;
@@ -1121,9 +1121,9 @@
     }
   }
   @media screen and  (max-width:950px){
-    #overview-section {
+    /*#overview-section {
       height: 670px !important;
-    }
+    }*/
     #overview-app {
       width:80%;
     }
@@ -1147,7 +1147,6 @@
     #overview-slide {
       background: none;
       border-top: 10px solid #F8CE76;
-      height: auto !important;
     }
     .overview-response-2 {
       display:none;
@@ -1167,14 +1166,14 @@
       float: none;
       margin-right: auto;
     }
-    #overview-bottom {
-      position: static;
+    #overview-bottom-inner {
+      display: none;
     }
   }
   @media screen and  (max-width:790px){
-    #overview-section {
+    /*#overview-section {
       height: 665px !important;
-    }
+    }*/
   }
 
   @media screen and  (max-width:760px){
@@ -1211,9 +1210,9 @@
     .students-pic {
      margin: auto;
     }
-    #overview-app-text {
+    /*#overview-app-text {
       display: none;
-    }
+    }*/
 
   }
   @media screen and  (max-height:500px){
@@ -1221,11 +1220,7 @@
       width: 90%;
     }
   }
-  @media screen and  (max-width:730px){
-    #overview-bottom {
-      display:none;
-    }
-  }
+
   @media screen and  (max-width:700px){
     .students-success-story {
       width:60%;
@@ -1238,9 +1233,9 @@
     }
   }
   @media screen and  (max-height:695px){
-    #overview-section {
+    /*#overview-section {
       height: 695px !important;
-    }
+    }*/
   }
   @media screen and  (max-width:680px){
     .students-more-onleft {
@@ -1268,6 +1263,11 @@
   @media screen and  (max-height:650px){
     .overview-div-text{
       margin-top: 50px;
+    }
+  }
+  @media screen and  (max-width:610px){
+    #overview-bottom {
+      height:90px;
     }
   }
   @media screen and  (max-height:500px){
@@ -1313,6 +1313,9 @@
     #footer-frame {
       width:80%;
     }
+    #overview-bottom {
+      display:none;
+    }
   }
   @media screen and  (max-width:500px){
   #students-section {
@@ -1337,9 +1340,6 @@
     #overview-slide {
       background: none;
       border-top: 10px solid #F8CE76;
-    }
-    #overview-bottom {
-      display:none;
     }
     .overview-response-2 {
       display:none;
@@ -1372,9 +1372,9 @@
     }
   }
   @media screen and (max-width: 359px){
-    #overview-section {
+    /*#overview-section {
       height: 820px !important;
-    }
+    }*/
     #overview-app {
       width: 92%;
     }
