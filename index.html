@@ -56,12 +56,171 @@
                           @theironyard  @peterbarth  @nathanspainhour  @joeygaskin
 
       -->
+      <style>
+              html,body {
+                  margin: 0;
+                  padding: 0;
+                  overflow:hidden;
+              }
+
+              .section,
+              .slide,
+              .fp-tableCell{
+                  height: 100vh;
+              }
+          </style>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  				$('#tech-diversity').fullpage({
+            loopHorizontal: false,
+            lockAnchors:true,
+  					anchors:['overview', 'students', 'education', 'employment', 'organizations', 'accountability', 'locations', 'updates'],
+            sectionsColor: ['#FFFFFF', '#D8D8D8', '#99B7C5', '#D8D8D8', '#526C79', '#F8CE76', '#9AB7C5'],
+  					navigation: true,
+  					navigationPosition: 'left',
+  					navigationTooltips: ['Overview', 'Students', 'Education', 'Employment', 'Organizations', 'Accountability', 'Locations', 'Updates'],
+  					showActiveTooltip: true,
+  					slidesNavigation: false,
+  					slidesNavPosition: 'bottom',
+  					slideTooltips: ["S0Slide 0", "S0Slide 1", "S0Slide 2", "S0Slide 3", "S1Slide 0", "S1Slide 1", "S1Slide 2", "S1Slide 3", "S2Slide 0", "S2Slide 1", "S2Slide 2", "S2Slide 3"],
+            afterRender: function(){
+              $('#fp-nav').addClass('custom');
+            },
+            afterLoad: function(anchorLink, index){
+              if(index==0){
+                $('#fp-nav').removeClass('custom');
+              }else if(index==2){
+                $('#fp-nav').removeClass('custom');
+              }else if(index==4){
+                $('#fp-nav').removeClass('custom');
+              }else if(index==5){
+                $('#fp-nav').addClass('custom');
+              }else if(index==7){
+                $('#fp-nav').removeClass('custom');
+              }else{
+                $('#fp-nav').addClass('custom');
+              }
+
+            },
+
+            afterLoad: function(anchorLink, index){
+               var loadedSection = $(this);
+
+               //using index
+               if(index == 1){
+                   $( ".fp-next" ).hide();
+               } else if (index == 2){
+                   $( ".fp-next" ).show();
+                 }
+             },
+
+
+
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                        var loadedSlide = $(this);
+                        //first slide of the second section
+
+              if(anchorLink == 'students' && slideIndex == 1){
+                  $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'right');
+              } else if (index == 2){$.fn.fullpage.setKeyboardScrolling(true,'right');
+            }
+
+
+              if(anchorLink == 'students' && slideIndex == 2){
+                  $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+              }
+
+              if(anchorLink == 'students' && slideIndex == 3){
+                  $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+              }
+
+              if(anchorLink == 'students' && slideIndex == 4){
+                  $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+              }
+
+              if(anchorLink == 'students' && slideIndex == 5){
+                  $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+              }
+
+              if(anchorLink == 'students' && slideIndex == 6){
+                  $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+              }
+
+              if(anchorLink == 'students' && slideIndex == 7){
+                  $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
+              }
+
+            },
+
+            onLeave: function(index, nextIndex, direction){
+             var leavingSection = $(this);
+
+             //after leaving section 2
+             if(index == 2 && direction =='down'){
+                 $( ".fp-next" ).hide();
+             }
+           },
+
+              onSlideLeave: function(anchorLink, index, slideIndex, direction){
+                 var leavingSlide = $(this);
+
+
+                   if(anchorLink == 'students' && slideIndex == 1 && direction =='down, up'){
+                     $( ".fp-next" ).hide();
+                   }
+               },
+  				});
+  			});
+
+
+
+
+
+        //adding the action to the button
+  $(document).on('click', '#applytoday', function(){
+    $.fn.fullpage.silentMoveTo('overview', 1);
+  });
+
+        //adding the action to the button
+  $(document).on('click', '#leroy-story', function(){
+    $.fn.fullpage.silentMoveTo('students', 2);
+  });
+
+  //adding the action to the button
+  $(document).on('click', '#astrid-story', function(){
+  $.fn.fullpage.silentMoveTo('students', 3);
+  });
+
+  //adding the action to the button
+  $(document).on('click', '#andrew-story', function(){
+  $.fn.fullpage.silentMoveTo('students', 4);
+  });
+
+  //adding the action to the button
+  $(document).on('click', '#bernard-story', function(){
+  $.fn.fullpage.silentMoveTo('students', 5);
+  });
+
+  //adding the action to the button
+  $(document).on('click', '#michelle-story', function(){
+  $.fn.fullpage.silentMoveTo('students', 6);
+  });
+
+  //adding the action to the button
+  $(document).on('click', '#wonman-story', function(){
+  $.fn.fullpage.silentMoveTo('students', 7);
+  });
+
+  $(document).on('click', '#students-home', function(){
+    $.fn.fullpage.silentMoveTo('students', 0);
+  });
+  </script>
   <style>
   body {
     margin:0;
     padding:0;
     font-family: "Open Sans", "Gentium Book Basic", "PT Sans", Helvetica, Arial, Verdana, sans-serif, serif;
-    background-color: #384a54;
+    background-color: #526C79;
   }
 
   /* Colors
@@ -357,7 +516,7 @@
     display:none;
   }
   #overview-app {
-  width:50%;
+  width:80%;
   margin: 0 auto;
   overflow-y: scroll !important;
   }
@@ -551,11 +710,11 @@
     width: 100%;
   }
   #locations-frame {
-    position relative
+
     margin: 0 auto;
   }
   #locations-section {
-
+    position: relative;
   }
 
   /* Footer
@@ -1057,7 +1216,7 @@
     }
 
   }
-  @media screen and  (max-height:750px){
+  @media screen and  (max-height:500px){
     #overview-app {
       width: 90%;
     }
