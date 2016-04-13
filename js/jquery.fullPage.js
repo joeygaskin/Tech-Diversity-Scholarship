@@ -149,7 +149,7 @@
             paddingBottom: 0,
             fixedElements: null,
             responsive: 0, //backwards compabitility with responsiveWiddth
-            responsiveWidth: 1101,
+            responsiveWidth: 1161,
             responsiveHeight: 0,
 
             //Custom selectors
@@ -2835,10 +2835,12 @@ $(document).ready(function() {
             }else{
               $('#fp-nav').addClass('custom');
             }
+
           },
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
                       var loadedSlide = $(this);
                       //first slide of the second section
+
             if(anchorLink == 'students' && slideIndex == 1){
                 $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'right');
             } else {$.fn.fullpage.setKeyboardScrolling(true,'left, right');
@@ -2867,9 +2869,50 @@ $(document).ready(function() {
             if(anchorLink == 'students' && slideIndex == 7){
                 $( ".fp-prev" ).hide() && $( ".fp-next" ).hide() && $.fn.fullpage.setKeyboardScrolling(false,'left, right');
             }
+
           },
+
+          onLeave: function(index, nextIndex, direction){
+           var leavingSection = $(this);
+
+           //after leaving section 2
+           if(index == 1 && direction =='down'){
+               $( ".fp-next" ).hide();
+           }
+         },
+
+
+         afterLoad: function(anchorLink, index, slideIndex){
+            var loadedSection = $(this);
+
+            //using index
+            if(index == 2){
+                $( ".fp-next" ).show();
+            }
+          },
+
+         onSlideLeave: function(anchorLink, index, slideIndex, direction){
+            var leavingSlide = $(this);
+
+
+              if(index == 2 && slideIndex == 1 && direction =='down, up'){
+                $( ".fp-next" ).hide();
+              }
+
+          },
+
+
 				});
 			});
+
+
+
+
+
+      //adding the action to the button
+$(document).on('click', '#applytoday', function(){
+  $.fn.fullpage.silentMoveTo('overview', 1);
+});
 
       //adding the action to the button
 $(document).on('click', '#leroy-story', function(){

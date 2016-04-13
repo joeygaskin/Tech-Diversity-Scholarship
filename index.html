@@ -307,6 +307,7 @@
     background-size: cover;
     border-top: 10px solid #F8CE76;
     overflow: visible;
+    position: relative;
   }
   #overview-bottom {
     width: 100%;
@@ -354,6 +355,29 @@
   #overview-response-3 {
     display:none;
   }
+  #overview-app {
+  width:50%;
+  margin: 0 auto;
+  overflow-y: scroll !important;
+  }
+  #overview-app form{
+  background-color: #D8D8D8;
+  padding: 30px;
+  border-radius: 10px;
+  }
+  #overview-app label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+  }
+  #overview-app input{
+  font-size: 14px;
+  }
+  #overview-app textarea{
+  font-size: 14px;
+  }
+  #overview-app-border {
+  border-top: 10px solid #F8CE76;
+  }
 
   /* Section 2 - Students
   * --------------------------------------- */
@@ -373,7 +397,7 @@
   }
   .students-left {
     float: left;
-    width: 30%;
+    width: 31%;
   }
   .students-right {
     float: left;
@@ -416,6 +440,15 @@
     display:block;
     margin-bottom:80px;
     margin-top: 4%;
+  }
+  .fp-viewing-overview-0 div.fp-controlArrow.fp-next{
+    display: none !important;
+  }
+  .fp-viewing-overview-1 div.fp-controlArrow.fp-next{
+    display: none !important;
+  }
+  .fp-viewing-students-1 div.fp-controlArrow.fp-next{
+    display: none !important;
   }
   .fp-viewing-students-2 .fp-tableCell {
     vertical-align: inherit;
@@ -685,6 +718,11 @@
       width: 185px;
       height: auto;
     }
+    .students-more-stories {
+      display:block;
+      margin-bottom:60px;
+      margin-top: 4%;
+    }
     #overview-section {
       background: url(img/overview-main-image-2.png) no-repeat center center;
       background-size: cover;
@@ -721,6 +759,28 @@
     .section-text {
       margin: 10% 12%;
     }
+    .students-more-stories {
+      display:block;
+      margin-bottom:40px;
+      margin-top: 4%;
+    }
+    .students-more-left {
+      float: none;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .students-more-right {
+      float: none;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .students-more-text{
+      width: 250px;
+    }
+    .students-more {
+    height: 420px;
+    overflow-y: scroll !important;
+    }
   }
   @media screen and  (max-width:1100px){
     .section-text {
@@ -737,7 +797,6 @@
     }
     .students-more {
       width: 95%;
-      height: auto;
       margin: 0 auto;
     }
   }
@@ -768,10 +827,6 @@
     #students-section {
       height: 650px !important;
     }
-    .students-more {
-    height: 400px;
-    overflow-y: scroll;
-    }
     .students-right {
     height: 500px;
     overflow-y: scroll !important;
@@ -779,23 +834,11 @@
     .section-banner-2 {
       right: -5%;
     }
-    .students-more-stories {
-      display:block;
-      margin-bottom:60px;
-      margin-top: 4%;
-    }
     .students-more-left {
-      float: none;
       width: 80%;
-      margin: 0 auto;
     }
     .students-more-right {
-      float: none;
       width: 80%;
-      margin: 0 auto;
-    }
-    .students-more-text{
-      width: 250px;
     }
   }
   @media screen and  (max-width:980px){
@@ -1134,15 +1177,16 @@
   <body>
   	<div id="tech-diversity">
 
-      <div class="section" id="overview-section">
+      <div class="section" >
+        <div class="slide" id="overview-section">
         <div class="overview-left">
           <div><img src="img/tech-diversity-logo.png" width="428px" height="130px"/></div>
-          <div><button type="button">Apply Today</button></div>
+          <div><button type="button" id="applytoday">Apply Today</button></div>
         </div>
         <div class="overview-div">
           <div class="overview-response">
           <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px"/></div>
-          <div><button type="button">Apply Today</button></div>
+          <div><button type="button" id="applytoday">Apply Today</button></div>
         </div>
         <div class="overview-div-text">
           <img src="img/tech-diversity-logo-2.png" id="overview-response-3" style="width: 100%; height:auto; margin-bottom: 25px;"/>
@@ -1153,7 +1197,7 @@
           personnel and people with disabilities. Financially-eligible students will be considered and
           may be eligible to receive a full-ride scholarship to attend a full-time code school and take
           the first step toward a fulfilling career in technology.</p>
-          <div id="overview-response-3"><button type="button">Apply Today</button></div>
+          <div id="overview-response-3"><button type="button" id="applytoday">Apply Today</button></div>
           <div class="overview-response-2">
             <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px" style="float:right;"/></div>
             <div><button type="button" style="float:right;">Apply Today</button></div>
@@ -1170,6 +1214,32 @@
             <div><img src="img/atlantic-logo.png"/></div>
             <div><img src="img/abc-logo.png"/></div>
           </div>
+        </div>
+      </div>
+        <div class="slide" id="overview-app-border">
+          <div id="overview-app">
+          <div><h1>Apply for the Tech Diversity Scholarship</h1><p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p></div>
+          <div><form method="post" action="">
+    <label for="name"><strong>Your Name*:</strong>
+    </label>
+    <input type="text" style="" aria-required="true" required="required" name="realname" id="realname" placeholder=""><p>
+    <label for="email"><strong>Your E-mail Address*:</strong>
+    </label>
+    <input type="email" style="" required="required" aria-required="true" id="email" name="email" placeholder=""><p>
+    <label class="desc" for="number"><strong>Phone Number*</strong></label>
+    <span><input class="field text" maxlength="3" size="3" tabindex="3" type="tel" value="" required=""></span>
+    <span><input class="field text" maxlength="3" size="3" tabindex="4" type="tel" value="" required=""></span>
+    <span><input class="field text" maxlength="4" size="4" tabindex="5" type="tel" value="" required=""></span><p>
+    <label for="Inquiry"><strong>Tell us how you'll support diversity by making technology more open and available to underrepresented groups.</strong>:</label>
+    <textarea style="display:block; width: 95%; margin:auto;" rows="7" required="required" aria-required="true" wrap="soft" id="Inquiry" name="Inquiry" placeholder=""></textarea>
+    <br>
+    <button type="submit">Submit Form</button>
+</form></div>
+      </div>
         </div>
       </div>
 
@@ -1281,7 +1351,6 @@
               <p>He began class soon after returning home from Kabul in January 2015. "Learning [at The Iron Yard] doesn’t happen in a vacuum. These dudes don’t know it, but they’ve helped me a bunch along the way — there were times when I thought I wouldn’t solve an issue. StackOverflow, Google and all the interwebs hadn’t helped. But my buddies did.&nbsp;<span style="">Overall this experience has been what I needed to get where I wanted. Period. I am getting to where I wanted to be. I am getting to where I saw myself. What is that worth to me? Much."</span></p>
               <p>After graduation, LeRoy immediately jumped into an apprenticeship with Stackwave in Houston, where he is now focused on training in Front End Engineering. He’s still in touch with his cohort peers, who lean on each other when they need support as they launch into new careers. LeRoy described the camaraderie eloquently: “we all were seeking to create something, make something real and see it exist in the world. I think the skills and tools are simply a means to solve problems and create.” </p>
               <p>LeRoy says he is passionate about working with customers to see a vision come to life. He loves solving problems through web applications, making brands stronger with solid design, and watching clients get excited about his work. "The skills I’ve learned and continue to develop have helped change the trajectory of options I have available," he said.</p>
-              <p style="margin-top:100px;"></p>
               </div>
             </div>
         </div>
@@ -1307,7 +1376,6 @@
                  from here. I have a feeling that instead of an ending, I am experiencing and expansion, and that
                  somehow all of this will just keep growing and changing. I hope that we all stay connected along
                  the way, cause I already miss these guys so much.</p>
-                 <p style="margin-top:100px;"></p>
               </div>
             </div>
         </div>
@@ -1331,7 +1399,6 @@
               <p>Now, I am honestly working at the best job of my life, with the best cause in the world. My job is to develop mobile health applications for people in remote villages that don’t have access to health care in areas of Guatemala and other isolated areas in third world countries.</p>
               <p>The specific application that I am working on right now is an Android application that hooks up to ultrasound devices. It helps midwives who are taking care of pregnant women. Most of them are unable to read, so I had to tailor this application for them. It is very vocal and visual, with audible instructions. </p>
               <p>It’s really ironic that I was pre-med and I still somehow ended up in the medical field, not as a doctor but as a developer. Now, I’m finishing my bachelor’s degree online, and at the same time doing a job I love.</p>
-                 <p style="margin-top:100px;"></p>
               </div>
             </div>
         </div>
@@ -1357,7 +1424,6 @@
               <p>One of the companies Bernard first connected with when he moved to Durham was a well-known development consultancy called CrossComm. Bernard had pitched them a startup idea and they struck up a relationship, often bumping into one another at American Underground while Bernard was freelancing. When he told a few of them that he was joining The Iron Yard, they told him to keep in touch about opportunities for a development job. After he graduated, Bernard officially joined the CrossComm team. “It has been awesome so far. On&nbsp;my very first day, I was working on an app for Forbes. We are building their “Thirty Under Thirty” app this year, which is really, really cool,” he said.</p>
               <p>The very first day I was doing something I did not learn at The Iron Yard, but because of The Iron Yard I felt comfortable enough to tackle it. It was a cool thing, because I came into The Iron Yard with a lot of other skills, so then it really equipped me with the programming acumen to be able to tackle the kind of jobs that I wanted to be in.</p>
               <p>Bernard is continuing to work on his entrepreneurial ventures on the side. He plans to launch&nbsp;<a href="https://hackstarter.com/">Hackstarter</a>, a crowdfunding site for students to raise money for coding bootcamps, in January 2016. “As a software&nbsp;developer, you fail everyday, hundreds of times. Especially when you are learning, and that was really hard for me. The cool part is, you see growth pretty quickly in software development. You are learning new stuff all the time, and once you kind of understand the core concepts, you can pick up new things pretty quickly.”</p>
-              <p style="margin-top:100px;"></p>
               </div>
             </div>
         </div>
@@ -1375,7 +1441,6 @@
             <p>After reviewing their site, I instantly clicked with the design material and self-motivated, fast-paced environment they presented. I was enthralled with the idea of learning a new skill and making a career in interface design. </p>
             <p>Throughout the class I was constantly challenged, inspired, and confident I was on the forefront of design/code education, learning from extremely talented people. It's such an exciting time to enter the industry! </p>
             <p>Within a month of finishing the course I was offered a job by a company familiar with the quality education of The Iron Yard. I'm teaching myself new, marketable skills every day, and couldn't be more excited to spend my career as a designer.</p>
-            <p style="margin-top:100px;"></p>
               </div>
             </div>
         </div>
@@ -1395,7 +1460,6 @@
               <p>A bootcamp however fit my learning style and my current status of being unemployed perfectly.</p>
               <p>I feel like I am now equipped with the proper tools to create things. They may be rudimentary currently but with practice I feel like I can hone them to create professional and valuable apps that can create change.</p>
               <p>One of the great strengths of software is its ability to scale everything and I’m hoping to take advantage of that in the future.</p>
-              <p style="margin-top:100px;"></p>
               </div>
             </div>
         </div>
