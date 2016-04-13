@@ -2882,24 +2882,24 @@ $(document).ready(function() {
          },
 
 
-         afterLoad: function(anchorLink, index, slideIndex){
-            var loadedSection = $(this);
-
-            //using index
-            if(index == 2){
-                $( ".fp-next" ).show();
-            }
-          },
-
-         onSlideLeave: function(anchorLink, index, slideIndex, direction){
-            var leavingSlide = $(this);
-
-
-              if(index == 2 && slideIndex == 1 && direction =='down, up'){
-                $( ".fp-next" ).hide();
-              }
-
-          },
+        //  afterLoad: function(anchorLink, index, slideIndex){
+        //     var loadedSection = $(this);
+         //
+        //     //using index
+        //     if(index == 2){
+        //         $( ".fp-next" ).show();
+        //     }
+        //   },
+         //
+        //  onSlideLeave: function(anchorLink, index, slideIndex, direction){
+        //     var leavingSlide = $(this);
+         //
+         //
+        //       if(index == 2 && slideIndex == 1 && direction =='down, up'){
+        //         $( ".fp-next" ).hide();
+        //       }
+         //
+        //   },
 
 
 				});
