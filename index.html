@@ -56,6 +56,9 @@
                           @theironyard  @peterbarth  @nathanspainhour  @joeygaskin
 
       -->
+
+
+      <!-- Allows page to load properly -->
       <style>
               html,body {
                   margin: 0;
@@ -69,6 +72,9 @@
                   height: 100vh;
               }
           </style>
+
+          <!-- Script function-->
+
   <script type="text/javascript">
   $(document).ready(function() {
   				$('#tech-diversity').fullpage({
@@ -165,56 +171,57 @@
                  var leavingSlide = $(this);
 
 
-                   if(anchorLink == 'students' && slideIndex == 1 && direction =='down, up'){
-                     $( ".fp-next" ).hide();
-                   }
-               },
+             if(anchorLink == 'students' && slideIndex == 1 && direction =='down, up'){
+               $( ".fp-next" ).hide();
+             }
+           },
   				});
   			});
 
 
+                  //adding the action to the button
+            $(document).on('click', '#applytoday', function(){
+              $.fn.fullpage.silentMoveTo('overview', 1);
+            });
 
+                  //adding the action to the button
+            $(document).on('click', '#leroy-story', function(){
+              $.fn.fullpage.silentMoveTo('students', 2);
+            });
 
+            //adding the action to the button
+            $(document).on('click', '#astrid-story', function(){
+            $.fn.fullpage.silentMoveTo('students', 3);
+            });
 
-        //adding the action to the button
-  $(document).on('click', '#applytoday', function(){
-    $.fn.fullpage.silentMoveTo('overview', 1);
-  });
+            //adding the action to the button
+            $(document).on('click', '#andrew-story', function(){
+            $.fn.fullpage.silentMoveTo('students', 4);
+            });
 
-        //adding the action to the button
-  $(document).on('click', '#leroy-story', function(){
-    $.fn.fullpage.silentMoveTo('students', 2);
-  });
+            //adding the action to the button
+            $(document).on('click', '#bernard-story', function(){
+            $.fn.fullpage.silentMoveTo('students', 5);
+            });
 
-  //adding the action to the button
-  $(document).on('click', '#astrid-story', function(){
-  $.fn.fullpage.silentMoveTo('students', 3);
-  });
+            //adding the action to the button
+            $(document).on('click', '#michelle-story', function(){
+            $.fn.fullpage.silentMoveTo('students', 6);
+            });
 
-  //adding the action to the button
-  $(document).on('click', '#andrew-story', function(){
-  $.fn.fullpage.silentMoveTo('students', 4);
-  });
+            //adding the action to the button
+            $(document).on('click', '#wonman-story', function(){
+            $.fn.fullpage.silentMoveTo('students', 7);
+            });
 
-  //adding the action to the button
-  $(document).on('click', '#bernard-story', function(){
-  $.fn.fullpage.silentMoveTo('students', 5);
-  });
+            $(document).on('click', '#students-home', function(){
+              $.fn.fullpage.silentMoveTo('students', 0);
+            });
 
-  //adding the action to the button
-  $(document).on('click', '#michelle-story', function(){
-  $.fn.fullpage.silentMoveTo('students', 6);
-  });
-
-  //adding the action to the button
-  $(document).on('click', '#wonman-story', function(){
-  $.fn.fullpage.silentMoveTo('students', 7);
-  });
-
-  $(document).on('click', '#students-home', function(){
-    $.fn.fullpage.silentMoveTo('students', 0);
-  });
   </script>
+
+          <!-- Custom Style-->
+
   <style>
   body {
     margin:0;
@@ -289,10 +296,10 @@
     cursor:pointer;
   }
   .fp-responsive #mySection,
-.fp-responsive #mySection .fp-slide,
-.fp-responsive #mySection .fp-tableCell{
+  .fp-responsive #mySection .fp-slide,
+  .fp-responsive #mySection .fp-tableCell{
     height: auto !important;
-}
+  }
   /* Arrow Controls
   * --------------------------------------- */
   .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {border-color: transparent #CCC!important;}
@@ -516,27 +523,27 @@
     display:none;
   }
   #overview-app {
-  width:80%;
-  margin: 0 auto;
-  overflow-y: scroll !important;
+    width:80%;
+    margin: 0 auto;
+    overflow-y: scroll !important;
   }
   #overview-app form{
-  background-color: #D8D8D8;
-  padding: 30px;
-  border-radius: 10px;
+    background-color: #D8D8D8;
+    padding: 30px;
+    border-radius: 10px;
   }
   #overview-app label{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
   }
   #overview-app input{
-  font-size: 14px;
+    font-size: 14px;
   }
   #overview-app textarea{
-  font-size: 14px;
+    font-size: 14px;
   }
   #overview-app-border {
-  border-top: 10px solid #F8CE76;
+    border-top: 10px solid #F8CE76;
   }
   #overview-app-text {
 
@@ -569,7 +576,6 @@
     margin-top:10%;
     overflow-y: scroll !important;
     overflow-x: hidden;
-
   }
   .students-more {
     width: 100%;
@@ -710,7 +716,6 @@
     width: 100%;
   }
   #locations-frame {
-
     margin: 0 auto;
   }
   #locations-section {
@@ -792,26 +797,10 @@
 
   /* Media Queries
   * --------------------------------------- */
-  /*@media screen and  (max-width:1900px){
-    .students-more div {
-      margin-left: 1.5%;
-      margin-right: 1.5%;
-    }
-  }
-  @media screen and  (max-width:1750px){
-    .students-more div {
-      width: 250px;
-      margin-left: 1%;
-      margin-right: 1%;
-    }
-  }*/
   @media screen and  (max-width:1440px){
     .fp-controlArrow.fp-prev {
       left: 80px;
     }
-    /*.students-more div {
-      width: 222px;
-    }*/
   }
   @media screen and  (max-width:1366px){
     .overview-left {
@@ -842,28 +831,7 @@
     .overview-left {
       width: 37%;
     }
-    /*#andrew-story {
-      width: 180px;
-      height: 180px;
-    }
-    #bernard-story {
-      width: 180px;
-      height: 180px;
-    }
-    #michelle-story {
-      width: 180px;
-      height: 180px;
-    }
-    #wonman-story {
-      width: 180px;
-      height: 180px;
-    }*/
-    /*.students-more div {
-      left: 65px;
-      width: 200px;
-      margin-left: 2%;
-      margin-right: 2%;
-    }*/
+
   }
   @media screen and  (max-width:1260px){
     #students-intro {
@@ -926,19 +894,7 @@
       width: 500px;
       margin-top: 20px;
     }
-    /*.students-more div {
-      width: 200px;
-      margin-left: auto;
-      margin-right: auto;
-    }*/
   }
-  /*@media screen and  (max-width:1161px){
-    .students-more div {
-      width: 180px;
-      margin-left: .5%;
-      margin-right: .5%;
-    }
-  }*/
   @media screen and  (max-width:1160px){
     .section-text {
       margin: 10% 12%;
@@ -962,8 +918,8 @@
       width: 250px;
     }
     .students-more {
-    height: 420px;
-    overflow-y: scroll !important;
+      height: 420px;
+      overflow-y: scroll !important;
     }
   }
   @media screen and  (max-width:1100px){
@@ -1012,8 +968,8 @@
       height: 650px !important;
     }
     .students-right {
-    height: 500px;
-    overflow-y: scroll !important;
+      height: 500px;
+      overflow-y: scroll !important;
     }
     .section-banner-2 {
       right: -5%;
@@ -1086,11 +1042,11 @@
       height: 850px !important;
     }
     .students-more {
-    height: 600px;
+      height: 600px;
     }
     .students-right {
-    margin-left: 40px;
-    height: 600px;
+      margin-left: 40px;
+      height: 600px;
     }
     .students-success-story {
       display:block;
@@ -1121,9 +1077,6 @@
     }
   }
   @media screen and  (max-width:950px){
-    /*#overview-section {
-      height: 100% !important;
-    }*/
     #overview-app {
       width:80%;
     }
@@ -1177,13 +1130,7 @@
     #overview-section {
       height: 665px !important;
     }
-}
-  @media screen and  (max-width:790px){
-    /*#overview-section {
-      height: 665px !important;
-    }*/
   }
-
   @media screen and  (max-width:760px){
     #footer-frame {
       width:65%;
@@ -1203,47 +1150,40 @@
       width:100%;
     }
     .students-right {
-    float: none;
-    width: 80%;
-    margin-top: auto;
-    margin-left: auto;
-    margin: 0 auto;
+      float: none;
+      width: 80%;
+      margin-top: auto;
+      margin-left: auto;
+      margin: 0 auto;
     }
     .students-left {
-    float: none;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 50px;
+      float: none;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
     }
     .students-pic {
-     margin: auto;
+       margin: auto;
     }
     #overview-app-text {
       display: none;
     }
-
   }
   @media screen and  (max-height:500px){
     #overview-app {
       width: 90%;
     }
   }
-
   @media screen and  (max-width:700px){
     .students-success-story {
       width:60%;
     }
     .students-right {
-    height: 480px;
+      height: 480px;
     }
     .students-more {
-    height: 400px;
+      height: 400px;
     }
-  }
-  @media screen and  (max-height:695px){
-    /*#overview-section {
-      height: 695px !important;
-    }*/
   }
   @media screen and  (max-width:680px){
     .students-more-onleft {
@@ -1273,11 +1213,6 @@
       margin-top: 50px;
     }
   }
-  /*@media screen and  (max-width:610px){
-    #overview-bottom {
-      height:90px;
-    }
-  }*/
   @media screen and  (max-height:500px){
     .students-left{
       width: 100%;
@@ -1291,10 +1226,10 @@
       height: 1350px !important;
     }
     .students-more {
-    height: 1000px;
+      height: 1000px;
     }
     .students-right {
-    height: 950px;
+      height: 950px;
     }
     .section-frame {
       width:70%;
@@ -1323,17 +1258,16 @@
     }
   }
   @media screen and  (max-width:500px){
-  #students-section {
-    height: 1500px !important;
+    #students-section {
+      height: 1500px !important;
     }
     .students-more {
-    height: 1100px;
+      height: 1100px;
     }
     .students-right {
-    width: 90%;
+      width: 90%;
     }
   }
-
   @media screen and  (max-width:450px){
     .section-interest-white {
       display: none;
@@ -1367,18 +1301,17 @@
     .overview-div {
       width: 100%;
     }
-
   }
   @media screen and (max-width: 375px){
     #students-section {
       height: 1650px !important;
-      }
+    }
       .students-right {
       height: 1100px;
-      }
+    }
       .students-left {
       width: 95%;
-      }
+    }
     .overview-div-text {
       margin-top: 15px;
     }
@@ -1402,67 +1335,69 @@
 
       <div class="section" id="overview-section">
         <div class="slide" id="overview-slide">
-        <div class="overview-left">
-          <div><img src="img/tech-diversity-logo.png" width="428px" height="130px"/></div>
-          <div><button type="button" id="applytoday">Apply Today</button></div>
-        </div>
-        <div class="overview-div">
-          <div class="overview-response">
-          <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px"/></div>
-          <div><button type="button" id="applytoday">Apply Today</button></div>
-        </div>
-        <div class="overview-div-text">
-          <img src="img/tech-diversity-logo-2.png" id="overview-response-3" style="width: 100%; height:auto; margin-bottom: 25px;"/>
-          <p>The Tech Diversity Scholarship is the product of a public-private
-          partnership of organizations committed to providing access to technology education for all.
-          The scholarship is designed to remove financial barriers for people who are underrepresented
-          in the technology industry, including but not limited to: women, people of color, military
-          personnel and people with disabilities. Financially-eligible students will be considered and
-          may be eligible to receive a full-ride scholarship to attend a full-time code school and take
-          the first step toward a fulfilling career in technology.</p>
-          <div id="overview-response-3"><button type="button" id="applytoday">Apply Today</button></div>
-          <div class="overview-response-2">
-            <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px" style="float:right;"/></div>
-            <div><button type="button" style="float:right;" id="applytoday">Apply Today</button></div>
+          <div class="overview-left">
+            <div><img src="img/tech-diversity-logo.png" width="428px" height="130px"/></div>
+            <div><button type="button" id="applytoday">Apply Today</button></div>
+          </div>
+          <div class="overview-div">
+            <div class="overview-response">
+            <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px"/></div>
+            <div><button type="button" id="applytoday">Apply Today</button></div>
+          </div>
+          <div class="overview-div-text">
+            <img src="img/tech-diversity-logo-2.png" id="overview-response-3" style="width: 100%; height:auto; margin-bottom: 25px;"/>
+            <p>The Tech Diversity Scholarship is the product of a public-private
+            partnership of organizations committed to providing access to technology education for all.
+            The scholarship is designed to remove financial barriers for people who are underrepresented
+            in the technology industry, including but not limited to: women, people of color, military
+            personnel and people with disabilities. Financially-eligible students will be considered and
+            may be eligible to receive a full-ride scholarship to attend a full-time code school and take
+            the first step toward a fulfilling career in technology.</p>
+            <div id="overview-response-3"><button type="button" id="applytoday">Apply Today</button></div>
+            <div class="overview-response-2">
+              <div><img src="img/tech-diversity-logo-2.png" width="313px" height="79px" style="float:right;"/></div>
+              <div><button type="button" style="float:right;" id="applytoday">Apply Today</button></div>
+            </div>
+          </div>
+          </div>
+          <div id="overview-bottom">
+            <div id="overview-bottom-inner">
+              <div><img src="img/wsj-logo.png"/></div>
+              <div><img src="img/white-house-logo.png"/></div>
+              <div><img src="img/nbc-logo.png"/></div>
+              <div><img src="img/fastco-logo.png"/></div>
+              <div><img src="img/cnn-logo.png"/></div>
+              <div><img src="img/atlantic-logo.png"/></div>
+              <div><img src="img/abc-logo.png"/></div>
+            </div>
           </div>
         </div>
-        </div>
-        <div id="overview-bottom">
-          <div id="overview-bottom-inner">
-            <div><img src="img/wsj-logo.png"/></div>
-            <div><img src="img/white-house-logo.png"/></div>
-            <div><img src="img/nbc-logo.png"/></div>
-            <div><img src="img/fastco-logo.png"/></div>
-            <div><img src="img/cnn-logo.png"/></div>
-            <div><img src="img/atlantic-logo.png"/></div>
-            <div><img src="img/abc-logo.png"/></div>
-          </div>
-        </div>
-      </div>
         <div class="slide" id="overview-app-border">
           <div id="overview-app">
-          <div><h1>Apply for the Tech Diversity Scholarship</h1><p>
-            <p id="overview-app-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p></div>
-          <div><form method="post" action="">
-    <label for="name"><strong>Your Name*:</strong>
-    </label>
-    <input type="text" style="" aria-required="true" required="required" name="realname" id="realname" placeholder=""><p>
-    <label for="email"><strong>Your E-mail Address*:</strong>
-    </label>
-    <input type="email" style="" required="required" aria-required="true" id="email" name="email" placeholder=""><p>
-    <label class="desc" for="number"><strong>Phone Number*</strong></label>
-    <span><input class="field text" maxlength="3" size="3" tabindex="3" type="tel" value="" required=""></span>
-    <span><input class="field text" maxlength="3" size="3" tabindex="4" type="tel" value="" required=""></span>
-    <span><input class="field text" maxlength="4" size="4" tabindex="5" type="tel" value="" required=""></span><p>
-    <label for="Inquiry"><strong>Tell us how you'll support diversity by making technology more open and available to underrepresented groups.</strong>:</label>
-    <textarea style="display:block; width: 95%; margin:auto;" rows="7" required="required" aria-required="true" wrap="soft" id="Inquiry" name="Inquiry" placeholder=""></textarea>
-    <br>
-    <button type="submit">Submit Form</button>
-</form></div>
-      </div>
+            <div><h1>Apply for the Tech Diversity Scholarship</h1><p>
+              <p id="overview-app-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div><form method="post" action="">
+              <label for="name"><strong>Your Name*:</strong>
+              </label>
+              <input type="text" style="" aria-required="true" required="required" name="realname" id="realname" placeholder=""><p>
+              <label for="email"><strong>Your E-mail Address*:</strong>
+              </label>
+              <input type="email" style="" required="required" aria-required="true" id="email" name="email" placeholder=""><p>
+              <label class="desc" for="number"><strong>Phone Number*</strong></label>
+              <span><input class="field text" maxlength="3" size="3" tabindex="3" type="tel" value="" required=""></span>
+              <span><input class="field text" maxlength="3" size="3" tabindex="4" type="tel" value="" required=""></span>
+              <span><input class="field text" maxlength="4" size="4" tabindex="5" type="tel" value="" required=""></span><p>
+              <label for="Inquiry"><strong>Tell us how you'll support diversity by making technology more open and available to underrepresented groups.</strong>:</label>
+              <textarea style="display:block; width: 95%; margin:auto;" rows="7" required="required" aria-required="true" wrap="soft" id="Inquiry" name="Inquiry" placeholder=""></textarea>
+              <br>
+              <button type="submit">Submit Form</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1517,48 +1452,48 @@
             </div>
             <div class="students-more">
               <div class="students-more-left">
-              <div class="students-more-onleft">
+                <div class="students-more-onleft">
                   <img class="section-img" id="andrew-story" data-src="img/andrew-story.png" onload="this.style.opacity='1';" />
-              <div class="students-more-text">
+                <div class="students-more-text">
                   <h4>Mobile Developer</h4>
                   <h3>Andrew El-Masry</h3>
                   <p>Andrew switched majors several times in college before finding his stride in programming.</p>
                   <p id="andrew-story">Read Andrew's full story <img src="img/arrow-blue.png"/></p>
                 </div>
-              </div>
-              <div class="students-more-onright">
+                </div>
+                <div class="students-more-onright">
                   <img class="section-img" id="bernard-story" data-src="img/bernard-story.png" onload="this.style.opacity='1';" />
-              <div class="students-more-text">
-                  <h4>Web Developer</h4>
-                  <h3>Bernard Worthy</h3>
-                  <p>Bernard was on a leadership track with a major retailer when he decided to learn to code. </p>
-                  <p id="bernard-story">Read Bernard's full story <img src="img/arrow-blue.png"/></p>
+                  <div class="students-more-text">
+                    <h4>Web Developer</h4>
+                    <h3>Bernard Worthy</h3>
+                    <p>Bernard was on a leadership track with a major retailer when he decided to learn to code. </p>
+                    <p id="bernard-story">Read Bernard's full story <img src="img/arrow-blue.png"/></p>
+                  </div>
+                </div>
+              </div>
+              <div class="students-more-right">
+                <div class="students-more-onleft">
+                    <img class="section-img" id="michelle-story" data-src="img/michelle-story.png" onload="this.style.opacity='1';" />
+                  <div class="students-more-text">
+                    <h4>Web Designer</h4>
+                    <h3>Michelle Child</h3>
+                    <p>Michelle went from teaching in a foreign country to following her passion for design.</p>
+                    <p id="michelle-story">Read Michelle's full story <img src="img/arrow-blue.png"/></p>
+                  </div>
+                </div>
+                <div class="students-more-onright">
+                  <img class="section-img" id="wonman-story" data-src="img/wonman-story.png" onload="this.style.opacity='1';" />
+                  <div class="students-more-text">
+                    <h4>Mobile Developer</h4>
+                    <h3>Wonman Lee</h3>
+                    <p>Wonman used to work for a Senator on Capitol Hill. He now works as a back-end developer.</p>
+                    <p id="wonman-story">Read Wonman's full story <img src="img/arrow-blue.png"/></p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-              <div class="students-more-right">
-              <div class="students-more-onleft">
-                  <img class="section-img" id="michelle-story" data-src="img/michelle-story.png" onload="this.style.opacity='1';" />
-              <div class="students-more-text">
-                  <h4>Web Designer</h4>
-                  <h3>Michelle Child</h3>
-                  <p>Michelle went from teaching in a foreign country to following her passion for design.</p>
-                  <p id="michelle-story">Read Michelle's full story <img src="img/arrow-blue.png"/></p>
-              </div>
-              </div>
-              <div class="students-more-onright">
-                  <img class="section-img" id="wonman-story" data-src="img/wonman-story.png" onload="this.style.opacity='1';" />
-              <div class="students-more-text">
-                  <h4>Mobile Developer</h4>
-                  <h3>Wonman Lee</h3>
-                  <p>Wonman used to work for a Senator on Capitol Hill. He now works as a back-end developer.</p>
-                  <p id="wonman-story">Read Wonman's full story <img src="img/arrow-blue.png"/></p>
-              </div>
-              </div>
           </div>
         </div>
-      </div>
-            </div>
         <div class="slide" id="students-leroy-slide">
           <div class="section-frame">
             <div class="students-left">
@@ -1580,9 +1515,8 @@
         <div class="slide" id="students-astrid-slide">
           <div class="section-frame">
             <div class="students-left">
-                <div class="students-pic">
-                <div><img class="section-img" data-src="img/astrid-story.png" onload="this.style.opacity='1';" />
-                </div>
+              <div class="students-pic">
+                <div><img class="section-img" data-src="img/astrid-story.png" onload="this.style.opacity='1';" /></div>
                 <div><p id="students-home"><img src="img/back-arrow-blue.png"/> Read More Stories like Astrid's</p></div>
               </div>
             </div>
@@ -1599,15 +1533,14 @@
                  from here. I have a feeling that instead of an ending, I am experiencing and expansion, and that
                  somehow all of this will just keep growing and changing. I hope that we all stay connected along
                  the way, cause I already miss these guys so much.</p>
-              </div>
             </div>
+          </div>
         </div>
         <div class="slide" id="students-andrew-slide">
           <div class="section-frame">
             <div class="students-left">
-                <div class="students-pic">
-                <div><img class="section-img" data-src="img/andrew-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" />
-                </div>
+              <div class="students-pic">
+                <div><img class="section-img" data-src="img/andrew-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" /></div>
                 <div><p id="students-home"><img src="img/back-arrow-blue.png"/> Read More Stories like Andrew's</p></div>
               </div>
             </div>
@@ -1622,15 +1555,14 @@
               <p>Now, I am honestly working at the best job of my life, with the best cause in the world. My job is to develop mobile health applications for people in remote villages that don’t have access to health care in areas of Guatemala and other isolated areas in third world countries.</p>
               <p>The specific application that I am working on right now is an Android application that hooks up to ultrasound devices. It helps midwives who are taking care of pregnant women. Most of them are unable to read, so I had to tailor this application for them. It is very vocal and visual, with audible instructions. </p>
               <p>It’s really ironic that I was pre-med and I still somehow ended up in the medical field, not as a doctor but as a developer. Now, I’m finishing my bachelor’s degree online, and at the same time doing a job I love.</p>
-              </div>
             </div>
+          </div>
         </div>
         <div class="slide" id="students-bernard-slide">
           <div class="section-frame">
             <div class="students-left">
-                <div class="students-pic">
-                <div><img class="section-img" data-src="img/bernard-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" />
-                </div>
+              <div class="students-pic">
+                <div><img class="section-img" data-src="img/bernard-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" /></div>
                 <div><p id="students-home"><img src="img/back-arrow-blue.png"/> Read More Stories like Bernard's</p></div>
               </div>
             </div>
@@ -1647,32 +1579,30 @@
               <p>One of the companies Bernard first connected with when he moved to Durham was a well-known development consultancy called CrossComm. Bernard had pitched them a startup idea and they struck up a relationship, often bumping into one another at American Underground while Bernard was freelancing. When he told a few of them that he was joining The Iron Yard, they told him to keep in touch about opportunities for a development job. After he graduated, Bernard officially joined the CrossComm team. “It has been awesome so far. On&nbsp;my very first day, I was working on an app for Forbes. We are building their “Thirty Under Thirty” app this year, which is really, really cool,” he said.</p>
               <p>The very first day I was doing something I did not learn at The Iron Yard, but because of The Iron Yard I felt comfortable enough to tackle it. It was a cool thing, because I came into The Iron Yard with a lot of other skills, so then it really equipped me with the programming acumen to be able to tackle the kind of jobs that I wanted to be in.</p>
               <p>Bernard is continuing to work on his entrepreneurial ventures on the side. He plans to launch&nbsp;<a href="https://hackstarter.com/">Hackstarter</a>, a crowdfunding site for students to raise money for coding bootcamps, in January 2016. “As a software&nbsp;developer, you fail everyday, hundreds of times. Especially when you are learning, and that was really hard for me. The cool part is, you see growth pretty quickly in software development. You are learning new stuff all the time, and once you kind of understand the core concepts, you can pick up new things pretty quickly.”</p>
-              </div>
             </div>
+          </div>
         </div>
         <div class="slide" id="students-michelle-slide">
           <div class="section-frame">
             <div class="students-left">
-                <div class="students-pic">
-                <div><img class="section-img" data-src="img/michelle-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" />
-                </div>
+              <div class="students-pic">
+                <div><img class="section-img" data-src="img/michelle-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" /></div>
                 <div><p id="students-home"><img src="img/back-arrow-blue.png"/> Read More Stories like Michelle's</p></div>
               </div>
             </div>
             <div class="students-right"><h1 style="margin-bottom:0px;">Michelle Child</h1><p><h6 style="margin-top:0px;">Web Designer</h6><p>
-            <p>Before attending The Iron Yard, I worked as an English Assistant in a small French town near Dijon. When I came home, I had no idea what to do next. A friend suggested I look into The Iron Yard. </p>
-            <p>After reviewing their site, I instantly clicked with the design material and self-motivated, fast-paced environment they presented. I was enthralled with the idea of learning a new skill and making a career in interface design. </p>
-            <p>Throughout the class I was constantly challenged, inspired, and confident I was on the forefront of design/code education, learning from extremely talented people. It's such an exciting time to enter the industry! </p>
-            <p>Within a month of finishing the course I was offered a job by a company familiar with the quality education of The Iron Yard. I'm teaching myself new, marketable skills every day, and couldn't be more excited to spend my career as a designer.</p>
-              </div>
+              <p>Before attending The Iron Yard, I worked as an English Assistant in a small French town near Dijon. When I came home, I had no idea what to do next. A friend suggested I look into The Iron Yard. </p>
+              <p>After reviewing their site, I instantly clicked with the design material and self-motivated, fast-paced environment they presented. I was enthralled with the idea of learning a new skill and making a career in interface design. </p>
+              <p>Throughout the class I was constantly challenged, inspired, and confident I was on the forefront of design/code education, learning from extremely talented people. It's such an exciting time to enter the industry! </p>
+              <p>Within a month of finishing the course I was offered a job by a company familiar with the quality education of The Iron Yard. I'm teaching myself new, marketable skills every day, and couldn't be more excited to spend my career as a designer.</p>
             </div>
+          </div>
         </div>
         <div class="slide" id="students-wonman-slide">
           <div class="section-frame">
             <div class="students-left">
-                <div class="students-pic">
-                <div><img class="section-img" data-src="img/wonman-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" />
-                </div>
+              <div class="students-pic">
+                <div><img class="section-img" data-src="img/wonman-story.png" style="width:222px; height:auto;" onload="this.style.opacity='1';" /></div>
                 <div><p id="students-home"><img src="img/back-arrow-blue.png"/> Read More Stories like Wonman's</p></div>
               </div>
             </div>
@@ -1683,8 +1613,8 @@
               <p>A bootcamp however fit my learning style and my current status of being unemployed perfectly.</p>
               <p>I feel like I am now equipped with the proper tools to create things. They may be rudimentary currently but with practice I feel like I can hone them to create professional and valuable apps that can create change.</p>
               <p>One of the great strengths of software is its ability to scale everything and I’m hoping to take advantage of that in the future.</p>
-              </div>
             </div>
+          </div>
         </div>
       </div>
 
@@ -1858,7 +1788,7 @@
          zoom: 3.3,
          // causes pan & zoom handlers not to be applied, similar to
          // .dragging.disable() and other handler .disable() funtions in Leaflet.
-         interactive: false
+         interactive: true
      });
   </script>
 
